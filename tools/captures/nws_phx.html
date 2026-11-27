@@ -1,0 +1,3101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<title>NWS Phoenix Heat Page</title>
+<meta name="DC.title" content="NWS Phoenix Heat Page">
+<meta name="DC.description" content="Website with information relating to extreme heat within the NWS Phoenix forecast area.">
+<meta name="DC.creator" content="US Department of Commerce, NOAA, National Weather Service">
+<meta name="DC.date.created" scheme="ISO8601" content="September 22nd 2026 10:18 PM">
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="EN-US">
+<meta name="DC.keywords" content="Extreme Heat">
+<meta name="DC.publisher" content="NOAA's National Weather Service">
+<meta name="DC.contributor" content="National Weather Service">
+<meta name="DC.rights" content="/disclaimer.php">
+<meta name="rating" content="General">
+<meta name="robots" content="index,follow">
+
+
+        <link href="/css/weatherstyle.css" rel="stylesheet" type="text/css">
+        <link href="/css/template.css" rel="stylesheet" type="text/css">
+        <link href="/css/myfcst.css" rel="stylesheet" type="text/css">
+        <link href="/css/ForecastSearch.css" rel="stylesheet" type="text/css">
+        <link href="/css/pointforecast.css" rel="stylesheet" type="text/css">
+        <link href="/css/jqueryui10_3_1custom/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/b485e332/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script src="https://www.youtube.com/iframe_api"></script><script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-migrate-1.4.1.js"></script>        <script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js"></script>        <script type="text/javascript" src="/js/jquery.hoverIntent.minified.js"></script>        <script type="text/javascript" src="/js/ForecastSearch.js"></script>        <script type="text/javascript" id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&amp;sub-agency=NOAA&amp;yt=true&amp;pga4=G-736JJ6NL0V"></script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-CSLL4ZEK4L"></script>        <script type="text/javascript" src="/js/topNavMenu.js"></script>        <script type="text/javascript" src="/js/NidsESRI.js"></script>        <script type="text/javascript" src="/js/nwsexit.js"></script>
+
+
+        <link href="/css/widgets.css" rel="stylesheet" type="text/css">
+        <link href="/css/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+        
+        <script type="text/javascript" src="/js/widgets.js"></script>
+        <script type="text/javascript" src="/js/jquery.cycle2.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
+        <script type="text/javascript" src="/js/nwsexit.js"></script>
+        
+<script>
+$(document).ready(function() {
+  $('img.nocache').each(function () {
+      var $this = $(this);
+      $this.attr('src', noCache($this.attr('src')));
+  });
+});
+function noCache(url) {
+  return url + (url.indexOf('?') >= 0 ? '&nocache=' : '?') + $.now();
+}
+</script>
+
+    </head>
+    <body> 
+        
+
+        <div class="header">
+    <div class="header-content">
+        <a href="https://www.weather.gov" class="header-nws"><img src="/bundles/templating/images/header/header.png" alt="National Weather Service"></a>
+        <a href="http://www.commerce.gov" class="header-doc"><img src="/bundles/templating/images/header/header_doc.png" alt="United States Department of Commerce"></a>
+        <a href="http://www.noaa.gov" class="header-noaa" title="National Oceanic and Atmospheric Administration"></a>
+    </div>
+    <div style="clear:both"></div>
+</div>
+<div class="header-shadow">
+    <div class="header-shadow-content"></div>
+</div>
+<script>
+    var domains = {
+        weather: "https://www.weather.gov",
+        forecast: "https://forecast.weather.gov",
+        airquality: "https://airquality.weather.gov",
+        aviation: "https://aviationweather.gov",
+        water: "https://water.weather.gov",
+        graphical: "https://graphical.weather.gov",
+        api: "https://api.weather.gov",
+        radar: "https://radar.weather.gov",
+        esriGeocode: "https://geocode.arcgis.com"
+    }
+</script>
+
+
+        <div class="center">
+
+            <div class="content">
+    <div class="topnav">
+        <ul id="topnav">
+            <li>
+                <script type="text/javascript">
+                    function goBack() {
+                        if (document.referrer.toLowerCase().indexOf("weather.gov") != -1) {
+                            history.back();
+                        } else {
+                            document.location.href = "https://www.weather.gov";
+                        }
+                    }
+                </script>
+                <div class="topMenuNavList home">
+                    <a href="#" onclick="goBack();">HOME</a>
+                </div>
+            </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/forecastmaps/">FORECAST</a>
+                    </div>
+                                                                        <div style="opacity: 0;" class="sub">
+                                <ul>
+                                                                            <li>
+                                            <a href="https://www.weather.gov">Local</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://digital.weather.gov">Graphical</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://aviationweather.gov">Aviation</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/marine/">Marine</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://water.noaa.gov">Rivers and Lakes</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.nhc.noaa.gov">Hurricanes</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.spc.noaa.gov">Severe Weather</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/fire/">Fire Weather</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://gml.noaa.gov/grad/solcalc/">Sunrise/Sunset</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.cpc.ncep.noaa.gov">Long Range Forecasts</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.cpc.ncep.noaa.gov">Climate Prediction</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.swpc.noaa.gov">Space Weather</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/wrh/climate">PAST WEATHER</a>
+                    </div>
+                                                                        <div style="opacity: 0;" class="sub">
+                                <ul>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/wrh/climate">Past Weather</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://gml.noaa.gov/grad/solcalc/">Astronomical Data</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.climate.gov/maps-data/dataset/past-weather-zip-code-data-table">Certified Weather Data</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/safety/">SAFETY</a>
+                    </div>
+                                                                                </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/informationcenter">INFORMATION</a>
+                    </div>
+                                                                        <div style="opacity: 0;" class="sub">
+                                <ul>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/wrn/wea">Wireless Emergency Alerts</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/wrn/">Weather-Ready Nation</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/owlie/publication_brochures">Brochures</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/coop/">Cooperative Observers</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/briefing/">Daily Briefing</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/hazstat">Damage/Fatality/Injury Statistics</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="http://mag.ncep.noaa.gov">Forecast Models</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/gis/">GIS Data Portal</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/nwr">NOAA Weather Radio</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/publications/">Publications</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/skywarn/">SKYWARN Storm Spotters</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/stormready">StormReady</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/tsunamiready/">TsunamiReady</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/notification/">Service Change Notices</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/education/">EDUCATION</a>
+                    </div>
+                                                                                </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/news">NEWS</a>
+                    </div>
+                                                                                </li>
+                            <li>
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/search/">SEARCH</a>
+                    </div>
+                                            <div style="opacity: 0;" class="sub">
+                            <ul class="no-links">
+                            <li><!-- Begin search code -->
+                                <div id="site-search">
+                                    <form method="get" action="https://search.usa.gov/search" style="margin-bottom: 0; margin-top: 0;">
+                                        <input type="hidden" name="v:project" value="firstgov">
+                                        <label for="query">Search For</label>
+                                        <input type="text" name="query" id="query" size="12">
+                                        <input type="submit" value="Go">
+                                        <p>
+                                            <input type="radio" name="affiliate" checked="checked" value="nws.noaa.gov" id="nws">
+                                            <label for="nws" class="search-scope">NWS</label>
+                                            <input type="radio" name="affiliate" value="noaa.gov" id="noaa">
+                                            <label for="noaa" class="search-scope">All NOAA</label>
+                                        </p>
+                                    </form>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                                    </li>
+                            <li class="last">
+                    <div class="topMenuNavList section-link">
+                        <a href="https://www.weather.gov/about/">ABOUT</a>
+                    </div>
+                                                                        <div style="opacity: 0;" class="sub">
+                                <ul>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/about/">About NWS</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/organization">Organization</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://sites.google.com/a/noaa.gov/nws-insider/">For NWS Employees</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/ncep/">National Centers</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.noaa.gov/nws-careers">Careers</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/contact">Contact Us</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://forecast.weather.gov/glossary.php">Glossary</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.weather.gov/socialmedia">Social Media</a>
+                                        </li>
+                                                                            <li>
+                                            <a href="https://www.noaa.gov/NWStransformation">NWS Transformation</a>
+                                        </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                    </ul>
+    </div>
+</div>
+
+
+            <div class="center-content">
+                <div id="zipcity_news">
+                    <div class="one-sixth-first">
+    <div id="forecast-lookup">
+        <form name="getForecast" id="getForecast" action="https://forecast.weather.gov/zipcity.php" method="get">
+            <label for="inputstring">Local forecast by <br>"City, St" or ZIP code</label>
+            <input id="inputstring" name="inputstring" type="text" value="Enter location ..." onclick="this.value=''" autocomplete="off">
+            <input name="btnSearch" id="btnSearch" type="submit" value="Go">
+            <div id="txtError">
+                <div id="errorNoResults" style="display:none;">Sorry, the location you searched for was not found. Please try another search.</div>
+                <div id="errorMultipleResults" style="display:none">Multiple locations were found. Please select one of the following:</div>
+                <div id="errorChoices" style="display:none"></div>
+                <input id="btnCloseError" type="button" value="Close" style="display:none">
+            </div>
+            <div id="txtHelp"><a style="text-decoration: underline;" href="javascript:void(window.open('https://www.weather.gov/ForecastSearchHelp.html','locsearchhelp','status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=1,scrollbars=1,height=500,width=530').focus());">Location Help</a></div>
+        </form>
+    </div>
+</div>
+
+                        <div class="five-sixth-last">
+                    <div id="topnews">
+                <div id="global_localnews" style="float:left;width:800px;">
+                    <div id="global_localnews_headerbar_main">
+                        <div id="global_localnews_headerbar_sub_left">
+                            <div id="global_localnews_title" style="color:black;margin:5px 0px 2px 0px;font-size:14px;font-weight:bold;">News Headlines</div>
+                        </div>
+                    </div>
+                    <div id="localnews">
+                        <ul>
+                                                            <li><a href="http://www.weather.gov/psr/history.html"><strong>This Day in Weather History</strong></a></li>
+                                                    </ul>
+                                                <ul>
+                    </ul></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                /** news headline Additional Headlines link **/
+                $(function () {
+                    $("#additionalNews").toggle();
+                    $(".toggleHeadlines a").on('click', function(e){
+                        e.preventDefault();
+                        e.stopPropagation();
+                        $(".toggleHeadlines").toggle();
+                        $(".hidden-news-link").toggle();
+                    });
+                });
+            </script>
+            </div>
+
+                </div>
+                <div class="full-width-bordertop">
+                    <div class="div-full">
+
+                        <!-- area for the myforecast widget and wwamap data -->
+                        <div class="one-sixth-first" id="sidebar">
+                            <script type="text/javascript" src="/js/jquery-cookie.js"></script>
+<script type="text/javascript" src="/js/MyForecastWidget.js"></script>
+<div id="myfcst-widget">
+    <div id="myfcst">
+        <form id="myfcst-form" action="/widgets/MyForecastWidget.php" style="display: block;">
+            <span id="myfcst-title">Customize Your <strong>Weather.gov</strong></span>
+            <div id="myfcst-input-block">
+                <input type="text" name="myfcst-location-input" id="myfcst-location-input" value="City, ST">
+                <label for="myfcst-location-input">Enter Your City, ST or ZIP Code</label><br>
+                <input type="checkbox" name="myfcst-remember" id="myfcst-remember">
+                <label for="myfcst-remember">Remember Me</label>
+            </div>
+            <div class="myfcst-footer">
+                <input type="submit" value="Get Weather" id="myfcst-submit">
+                <p class="myfcst-policy"><a href="/privacy.php">Privacy Policy</a></p>
+            </div>
+        </form>
+        <div id="myfcst-fcst"></div>
+        <div id="myfcst-multi-result"></div>
+        <div id="myfcst-loading">LOADING...</div>
+    </div>
+</div>
+
+                            
+                        </div><!-- end of <div class="one-sixth-first"> -->
+
+                        <div class="five-sixth-first" id="pagebody">
+                            <div class="div-full breadcrumb">
+    <div class="sitename">
+        <p class="sitename-name">NWS Phoenix</p>
+        <p class="sitename-class">Weather Forecast Office</p>
+    </div>
+    <div class="location">
+        <h1 class="location-pagetitle">NWS Phoenix Heat Page</h1>
+        <div class="location-breadcrumb">
+            <a href="https://www.weather.gov">Weather.gov</a>
+                                                &gt; <a href="https://www.weather.gov/psr">NWS Phoenix</a>
+                                &gt; NWS Phoenix Heat Page
+                    </div>
+    </div>
+</div>
+
+                            <div class="div-full">
+    <div class="subMenuNav">
+        <ul id="subMenuNav">
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="#">Current Hazards</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/crh/outlooks?sid=psr"> Current Outlooks</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/hazards?wfo=psr"> Detailed Hazards</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/briefing/"> Daily Briefing</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://public-partnerservices.nws.noaa.gov/ui/sasr/"> Submit Report</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/TextProduct?product=lsrpsr"> Local Storm Reports</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/erh/ghwo?wfo=psr"> Experimental Graphical Hazardous Weather Outlook</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="#">Current Conditions</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="http://www.weather.gov/wrh/hazards?&amp;zoom=8&amp;scroll_zoom=false&amp;center=33.6031820405205,-111.70349121093751"> Observations</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.star.nesdis.noaa.gov/GOES/index.php"> Satellite</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://water.noaa.gov/precip"> Precipitation</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KPHX"> Phoenix (KPHX)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KSDL"> Scottsdale (KSDL)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KIWA"> Phoenix-Mesa Gateway (KIWA) </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KDVT"> Phoenix-Deer Valley (KDVT)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KFFZ"> Mesa/Falcon Field (KFFZ)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KCGZ"> Casa Grande (KCGZ)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KBXK"> Buckeye (KBXK)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KGXF"> Gila Bend (KGXF)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KNYL"> Yuma (KNYL)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KBLH"> Blythe CA (KBLH)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/timeseries?site=KIPL"> Imperial CA (KIPL)</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="https://radar.weather.gov">Radar</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="https://radar.weather.gov/?settings=v1_eyJhZ2VuZGEiOnsiaWQiOm51bGwsImNlbnRlciI6Wy0xMTMuNDExLDMzLjIyOV0sInpvb20iOjh9LCJiYXNlIjoic3RhbmRhcmQiLCJjb3VudHkiOmZhbHNlLCJjd2EiOmZhbHNlLCJzdGF0ZSI6ZmFsc2UsIm1lbnUiOnRydWUsInNob3J0RnVzZWRPbmx5IjpmYWxzZX0%3D#/"> Local Enhanced</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://radar.weather.gov/#/"> National Enhanced</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://radar.weather.gov/?settings=v1_eyJhZ2VuZGEiOnsiaWQiOm51bGwsImNlbnRlciI6Wy0xMDYuMjQzLDQwLjE3OV0sInpvb20iOjV9LCJiYXNlIjoic3RhbmRhcmQiLCJjb3VudHkiOmZhbHNlLCJjd2EiOmZhbHNlLCJzdGF0ZSI6ZmFsc2UsIm1lbnUiOnRydWUsInNob3J0RnVzZWRPbmx5IjpmYWxzZX0%3D#/"> Regional Enhanced</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://radar.weather.gov/station/KIWA/standard"> Local KIWA Standard Radar (low bandwidth)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://radar.weather.gov/station/KYUX/standard"> Local KYUX Standard Radar (low bandwidth)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://radar.weather.gov/region/southrockies/standard"> Regional Standard Radars (Southern Rockies) (low bandwidth)</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="#">Forecasts</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="https://www.wpc.ncep.noaa.gov/heatrisk/?wfo=psr"> Experimental HeatRisk </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/travel"> Travel</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://forecast.weather.gov/product.php?site=psr&amp;issuedby=PSR&amp;product=AFD"> Forecast Discussion</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.aviationweather.gov/"> Aviation Weather</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/wxtable"> Local Area</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/fire?wfo=psr"> Fire Weather</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.spc.noaa.gov/"> Severe Weather</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.nhc.noaa.gov/"> Hurricane Center</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="winter"> Probabilistic Snowfall Forecasts</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/crh/pqpf?sid=psr"> Probabilistic Precipitation Forecast</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="https://www.water.noaa.gov/wfo/psr">Rivers and Lakes</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="https://www.water.noaa.gov/"> National Water Prediction Service (NWPS)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.cbrfc.noaa.gov/"> Colorado Basin RFC</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.water.noaa.gov/wfo/psr"> Local River Observations (Map)</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.cnrfc.noaa.gov/"> California Nevada RFC</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="#">Climate and Past Weather</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/climate?wfo=psr"> Local</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.drought.gov/"> Drought</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/wrh/climate"> National</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/eventsummaries"> Storm Event Summaries</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/HiResASOS"> High-Resolution KPHX ASOS</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                            <li>
+                    <div class="subMenuNavList section-link">
+                        <a href="#">Local Programs</a>
+                    </div>
+                                            <div class="sub">
+                            <ul>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/fastpage"> Fast Page</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/stormready/"> Preparedness / StormReady</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/skywarn.html"> Skywarn</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/heat"> Heat Program</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/twc/Monsoon"> Monsoon</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/MonsoonSafety"> Monsoon Safety</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/DustWorkshops"> Dust Workshops</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/ItemsOfInterest"> Items of Interest</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/media/psr/PSR_WWA_Product_Criteria.pdf"> Phoenix NWS Watch, Warning, Advisory Product Criteria</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/OtherUsefulLinks"> Other Useful Links</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.education.noaa.gov/"> Education Resources</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/coop/"> COOP Observer</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/About"> Our Office</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="http://www.weather.gov/news"> NWS News</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/MonthlyClimateArchive"> Monthly &amp; Yearly Climate Review Archive</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.weather.gov/psr/WFOPhoenixResearch"> Local Research</a>
+                                    </li>
+                                                            </ul>
+                        </div>
+                                    </li>
+                    </ul>
+    </div>
+</div>
+
+
+                            
+                            
+                            
+                            <div class="div-full">
+<div class="cms-content"><meta http-equiv="refresh" content="300">
+<style type="text/css">div.HDB div {
+  border-radius: 15px;
+  margin: 5px 0px 5px 0px;
+  font-family: arial;
+}
+div.feedback {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.2em;
+  background-color: #082e83;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+div.feedback a, div.feedback a:visited {
+  color: yellow; }
+div.closeFeedback {
+  float: right;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 10px;
+  position: relative;
+  top: -5px;
+  cursor: pointer;
+}
+div#alertBanner {
+  width: 100%;
+  height: 70px;
+  border: 1px solid black;
+  text-align: center;
+  background-color: lightgray;
+  color: darkgray;
+  position: relative;
+}
+span#alertBannerHeadline {
+  line-height: 70px;
+  display: block;
+  vertical-align: middle;
+}
+
+div#locationSelection {
+  position: absolute;
+  width: 175px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 0px;
+  top: 0px;
+  left: 5px;
+  color: white;
+  z-index: 1;
+  background-color: #082e83;
+  vertical-align: middle;
+}
+span#locArrow {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  left: 155px;
+  top: 0px;
+  line-height: 20px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  display: none;
+  top: 15px;
+  padding: 10px 0px 10px 0px;
+  width: 173px;
+  border-radius: 0px;
+  border: 1px solid #082e83;
+  background-color: white;
+}
+.dropdownMenu a {
+  background-color: none;
+  color: black;
+  text-decoration: none;
+  width: 173px;
+  display: block;
+  padding: 1px 0px 1px 0px;
+}
+.dropdownMenu a:hover {
+  text-decoration: red wavy underline;
+}
+
+div.updateTime {
+  position: absolute;
+  width: 175px;
+  height: 36px;
+  line-height: 18px;
+  text-align: center;
+  border: 0px;
+  top: 25px;
+  left: 5px;
+  font-size: 0.9em;
+  color: white;
+  background-color: #2687d0;
+  vertical-align: middle;
+}
+
+.ft, .rt, .rp {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+#arrow {
+  max-height: 1em;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.prob120 td, .prob110 td, .prob105 td, .prob100 td, .prob90 td, .prob80 td {
+  border: 1px solid gray;
+  padding: 5px 0px 5px 0px;
+  font-style: italic; }
+.prob120 td { background-color: white; color: black; }
+.prob110 td { background-color: #BFBFBF; color: black; }
+.prob105 td { background-color: #A0A0A0; color: black; }
+.prob100 td { background-color: #808080; color: white; }
+.prob90 td { background-color: #404040; color: white; }
+.prob80 td { background-color: #040404; color: white; }
+.rtrp-01 td, .rtrp-02 td, .rtrp-03 td, .rtrp-04 td, .rtrp-05 td, .rtrp-06 td {
+  font-size: 2em;
+  padding-top: 10px;  }
+#dailyProbsDisclaimer {
+  font-style: italic;
+  color: gray;
+  padding-left: 10px;
+  font-size: 0.7em;  }
+.nbmtime {
+  font-style: italic;
+  font-size: 0.7em;  
+  font-weight: bold;
+  color: #636161; }
+
+/* Target rows with class ftr-01, ftr-02, and ftr-03 and apply a light gray background */
+/* as a default and to serve as a background color when HR data is missing or unavailable */
+  #forecastTable .ftr-01,
+  #forecastTable .ftr-02,
+  #forecastTable .ftr-03 {
+    background-color: lightgray;
+  }
+
+.ftr-01, .ftr-02, .ftr-03 {
+  line-height: 50px;
+  font-weight: bold; }
+.ftr-03 td {
+  text-align: left;
+  padding-left: 10px; }
+.recordDates {
+  line-height: 30px;
+  font-weight: bold; }
+.ftr-01 {
+  font-size: 2em; }
+.ftr-02, .ftr-03 {
+  font-size: 3em; }
+.recordDates {
+  font-size: 1.5em; }
+
+.rtr-01, .rtr-02 {
+  font-size: 3em; }
+
+.HRtable {
+  border-collapse: collapse;
+  margin: 10px;
+  font-size: 1.0em; }
+.h00 { background-color: #d1ebd1; }
+.h01 { background-color: #f4f257; }
+.h02 { background-color: #f69632; }
+.h03 { background-color: #d21419; color: white; }
+.h04 { background-color: #8b1991; color: white; }
+.h00, .h01, .h02, .h03, .h04 {
+   width: 20%;
+   height: 10px;
+   text-align:center;
+   font-weight: bold;
+   padding: 5px;
+   font-size: 1.2em;  }
+.h10, .h11, .h12, .h13, .h14 {
+  background-color: cornsilk;
+  color: black;
+  width: 20%;
+  padding: 5px;
+  vertical-align: middle; }
+
+td.links, td.links a:visited {
+  font-weight: bold;
+  color: #254290;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.infobar {
+  width: 100%;
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5em;
+  height: 40px;
+  line-height: 40px;
+  box-sizing: border-box;
+  padding-left: 10px; }
+.infobox {
+  display: none; }
+
+.warmMaxRec {
+  background-color: pink;
+  font-weight: bold;
+  font-style: italic; }
+.warmMinRec {
+  background-color: powderblue;
+  font-weight: bold;
+  font-style: italic; }
+
+p.afdText {
+  margin: 10px 50px 10px 30px;
+  font-size: 1.2em; }
+
+.cpcOutlook {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.middle {
+  vertical-align: middle; }
+
+.cpcOutlook td div#above { color: maroon; }
+.cpcOutlook td div#near { color: dimgray; }
+.cpcOutlook td div#below { color: navy; }
+.cpcOutlook td a, .cpcOutlook td span#explain { font-size: 0.3em; }
+
+#HeatRiskInfoInfobox, #heatSafetyInfobox,
+#historicalHeatStatisticsInfobox  {
+  margin-left: 20px; }
+  
+table.heatriskExample {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-style: italic; }
+
+#HeatRiskInfoInfobox p, #heatSafetyInfobox p,
+#historicalHeatStatisticsInfobox p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#HeatRiskInfoInfobox img, #heatSafetyInfobox img, #countsInfobox img {
+  max-width: 80%;
+  max-height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; /* Adjust the margin value as needed */
+}
+
+}
+#HeatRiskInfoInfobox span#caption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  font-style: italic;
+  text-align: center; }
+
+span#subheadline {
+  font-weight: bold;
+  font-size: 1.2em; }
+span#bold { font-weight: bold; }
+
+#disclaimer {
+  font-style: italic;
+  color: gray;
+  padding-left: 10px;
+  font-size: 0.7em;  
+  display: none;
+}
+
+/* Historical Heat Warning Calendar */
+#historicalHeatCalendarInfobox {
+  padding: 10px 20px 20px 20px;
+}
+
+#heatCalendar {
+  width: 100%;
+  background: white;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+#heatCalendar .hcTopBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+#heatCalendar button,
+#heatCalendar select {
+  font-size: 1em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  background: white;
+  cursor: pointer;
+}
+
+#heatCalendar .hcSummary {
+  max-width: 720px;
+  margin: 0 auto 18px auto;
+  background: linear-gradient(180deg, #b30000 0%, #8f0000 100%);
+  color: white;
+  text-align: center;
+  padding: 16px 18px 14px 18px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.28);
+}
+
+#heatCalendar .hcSummarySite {
+  font-size: 1.15em;
+  font-weight: 800;
+  letter-spacing: .01em;
+}
+
+#heatCalendar .hcSummaryYear {
+  font-size: 2.1em;
+  font-weight: 900;
+  line-height: 1.05;
+  margin-top: 2px;
+}
+
+#heatCalendar .hcSummaryStats {
+  margin-top: 10px;
+  line-height: 1.25em;
+}
+
+#heatCalendar .hcSummaryMetrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  align-items: stretch;
+}
+
+#heatCalendar .hcSummaryMetric {
+  background: rgba(255,255,255,.13);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 10px;
+  padding: 9px 6px 8px 6px;
+  min-height: 82px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 36px 18px 16px;
+  row-gap: 3px;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+#heatCalendar .hcSummaryMetricValue {
+  display: block;
+  font-size: 2.15em;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0;
+}
+
+#heatCalendar .hcSummaryMetricLabel {
+  display: block;
+  margin: 0;
+  font-size: .82em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .035em;
+  line-height: 1;
+}
+
+#heatCalendar .hcSummaryMetricSubtext {
+  display: block;
+  margin: 0;
+  font-size: .78em;
+  font-weight: 700;
+  opacity: .95;
+  line-height: 1;
+}
+
+#heatCalendar .hcSummaryDivider {
+  width: 74%;
+  max-width: 430px;
+  height: 1px;
+  background: rgba(255,255,255,.42);
+  margin: 11px auto;
+}
+
+#heatCalendar .hcSummaryDetails {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#heatCalendar .hcSummaryDetailLabel {
+  display: block;
+  font-size: .78em;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  opacity: .9;
+}
+
+#heatCalendar .hcSummaryDetailValue {
+  display: block;
+  margin-top: 3px;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+#heatCalendar .hcSummaryRank,
+#heatCalendar .hcSummaryNote {
+  font-size: .86em;
+  font-weight: 750;
+  opacity: .97;
+}
+
+#heatCalendar .hcSummaryHeadline {
+  margin-top: 7px;
+  color: white;
+  font-size: .82em;
+  font-weight: 900;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+#heatCalendar .hcSummaryUpdated {
+  font-size: .72em;
+  font-weight: 650;
+  opacity: .82;
+  line-height: 1.3;
+}
+
+#heatCalendar .hcSummaryUpdatedLabel {
+  text-transform: uppercase;
+  letter-spacing: .045em;
+  opacity: .82;
+}
+
+#heatCalendar .hcCalendarGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+#heatCalendar .hcMonth {
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.15);
+  border: 1px solid #ddd;
+}
+
+#heatCalendar .hcMonthTitle {
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+#heatCalendar .hcDow,
+#heatCalendar .hcDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#heatCalendar .hcDow div {
+  text-align: center;
+  font-size: .75em;
+  font-weight: 700;
+  color: #555;
+  padding-bottom: 3px;
+}
+
+#heatCalendar .hcDay {
+  min-height: 48px;
+  border: 1px solid #ddd;
+  padding: 3px;
+  font-size: .85em;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+#heatCalendar .hcDay.empty {
+  background: #f7f7f7;
+  border-color: #eee;
+}
+
+#heatCalendar .hcDay.warning {
+  background: #e57373;
+  cursor: pointer;
+  transition: background-color .12s ease, box-shadow .12s ease;
+}
+
+#heatCalendar .hcDay.warning:hover {
+  background: #d84343;
+}
+
+#heatCalendar .hcDay.eventHighlight {
+  background: #b71c1c;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.45);
+  z-index: 3;
+}
+
+#heatCalendar .hcDay.today {
+  box-shadow: inset 0 0 0 2px rgba(0,102,204,.28);
+}
+
+#heatCalendar .hcDay.today .hcDateNumber {
+  background: #0066cc;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  line-height: 22px;
+}
+
+#heatCalendar .hcDay.today.warning .hcDateNumber {
+  box-shadow: 0 0 0 2px rgba(255,255,255,.75);
+}
+
+#heatCalendar .hcDateNumber {
+  color: black;
+  font-weight: 900;
+  font-size: .9em;
+}
+
+#heatCalendar .hcSummaryDivider {
+  width: 70%;
+  max-width: 360px;
+  height: 1px;
+  background: rgba(255,255,255,.45);
+  margin: 8px auto;
+}
+
+#heatCalendar .hcSummaryRank {
+  font-size: .95em;
+  font-weight: 800;
+}
+
+#heatCalendar .hcSummaryNote {
+  font-size: .9em;
+  font-weight: 700;
+  opacity: .95;
+}
+
+#heatCalendar .hcSummaryHeadline {
+  margin-top: 7px;
+}
+
+#heatCalendar .hcDurationBadge {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 2px 7px;
+  background: rgba(0,0,0,.72);
+  color: white;
+  border-radius: 999px;
+  font-size: .8em;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+#heatCalendar .hcDurationBadge.long {
+  background: #4b0000;
+}
+
+#heatCalendar .hcDurationBadge.veryLong {
+  background: #3b0a45;
+}
+
+#heatCalendar .hcDurationBadge.multi {
+  background: #222;
+}
+
+#heatCalendar .hcLoading {
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  margin: 20px;
+}
+
+#hcPopupOverlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  z-index: 999;
+}
+
+#hcPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  max-width: 540px;
+  width: calc(100% - 40px);
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.35);
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+#hcPopup h2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+#hcClosePopup {
+  float: right;
+  font-size: 22px;
+  line-height: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.hcPopupSubtitle {
+  font-weight: 800;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.hcPopupEvent {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+  margin-top: 12px;
+  line-height: 1.45;
+}
+
+.hcPopupEventTitle {
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.hcPopupEvent a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 10px;
+  background: #b30000;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.hcPopupEvent a:hover {
+  background: #7a0000;
+}
+
+#heatCalendar .hcFooterNote {
+  margin-top: 12px;
+  color: #666;
+  font-size: .8em;
+  text-align: center;
+}
+
+
+@media (max-width: 700px) {
+  #heatCalendar .hcSummaryMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #heatCalendar .hcSummaryDetails {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  #heatCalendar .hcCalendarGrid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<div class="HDB">
+<div class="feedback">Some features on this page are experimental - <a href="mailto:w-psr.webmaster@noaa.gov?subject=Heat Page Feedback">feedback</a> is appreciated!
+<div class="closeFeedback" onclick="closeFeedback()">?</div>
+</div>
+
+<div id="alertBanner" style="background-color: lightgray; color: darkgray;">
+<div id="locationSelection" onmouseout="hideLocMenu()" onmouseover="showLocMenu()"><span id="loc">Phoenix, AZ</span><span id="locArrow">⇓</span>
+
+<div class="dropdownMenu" style="display: none;"><a href="javascript:void(0)" onclick="loadHeatData('PHX')">Phoenix, AZ</a><a href="javascript:void(0)" onclick="loadHeatData('YUM')">Yuma, AZ</a><a href="javascript:void(0)" onclick="loadHeatData('ELC')">El Centro, CA</a><a href="javascript:void(0)" onclick="loadHeatData('TUS')">Tucson, AZ</a></div>
+</div>
+
+<div class="updateTime">Updated at<br>3:15 PM on Fri Nov 27, 2026</div>
+<span id="alertBannerHeadline" style="text-align: center;"><span id="headline1" style="font-size: 1.5em; line-height: 70px;">No Active Alerts</span></span></div>
+
+<div id="forecastTable">
+<table class="ft">
+	<tbody>
+		<tr class="ftr-01">
+			<td class="ftc-00" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Fri<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Nov 27</span></td>
+			<td class="ftc-01" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Sat<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Nov 28</span></td>
+			<td class="ftc-02" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Sun<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Nov 29</span></td>
+			<td class="ftc-03" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Mon<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Nov 30</span></td>
+			<td class="ftc-04" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Tue<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Dec 01</span></td>
+			<td class="ftc-05" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Wed<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Dec 02</span></td>
+			<td class="ftc-06" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); line-height: 40px; vertical-align: middle;">Thu<br><span style="color: rgb(0, 0, 0); font-size: 0.4em; line-height: 0px;">Dec 03</span></td>
+		</tr>
+		<tr class="ftr-02">
+			<td class="ftc-10" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">77</td>
+			<td class="ftc-11" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">77</td>
+			<td class="ftc-12" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">80</td>
+			<td class="ftc-13" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">77</td>
+			<td class="ftc-14" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">79</td>
+			<td class="ftc-15" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">67</td>
+			<td class="ftc-16" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0); padding-top: 10px;">69</td>
+		</tr>
+		<tr class="ftr-03">
+			<td class="ftc-20" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);"></td>
+			<td class="ftc-21" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);">51</td>
+			<td class="ftc-22" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);">53</td>
+			<td class="ftc-23" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);">53</td>
+			<td class="ftc-24" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);">59</td>
+			<td class="ftc-25" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);">56</td>
+			<td class="ftc-26" style="background-color: rgb(209, 235, 209); color: rgb(0, 0, 0);">51</td>
+		</tr>
+		<tr>
+			<td class="links" colspan="7"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/" target="_blank">HeatRisk Maps</a> | <a href="https://www.wpc.ncep.noaa.gov/heatrisk/historical/" target="_blank">Historical HeatRisk Data</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="HRtable">
+	<tbody>
+		<tr>
+			<td class="h10">No risk.</td>
+			<td class="h11">Risk to those extremely sensitive to heat.</td>
+			<td class="h12">Risk to those sensitive to heat.</td>
+			<td class="h13">Risk to most people.</td>
+			<td class="h14">Risk to everyone.</td>
+		</tr>
+		<tr>
+			<td class="h00">None</td>
+			<td class="h01">Minor</td>
+			<td class="h02">Moderate</td>
+			<td class="h03">Major</td>
+			<td class="h04">Extreme</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div id="disclaimer">Note: All historical and forecast temperatures are for specific locations (e.g. Sky Harbor Airport in Phoenix). The daily HeatRisk forecast above is also for specific locations, except for Phoenix where the risk level (color) represents an average of <a href="/images/psr/PhoenixHeatRisk.png">six points</a> around the Phoenix Metro Area.</div>
+
+<div class="infobar" id="dailyProbsInfobar" onclick="toggleBanner(this.id)">+ Daily Probabilistic Forecast</div>
+
+<div class="infobox" id="dailyProbsInfobox"><span id="dailyProbsDisclaimer">* Apparent differences between the probability forecast (below) and deterministic forecast (above) may occur due to expert weighting schemes. Probability forecasts sourced from the National Blend of Models.</span> <span class="nbmtime">NBM Run: </span>
+
+<table class="rp">
+	<tbody>
+		<tr class="recordDates">
+			<td class="rtcp-00">Nov 27</td>
+			<td class="rtcp-01">Nov 28</td>
+			<td class="rtcp-02">Nov 29</td>
+			<td class="rtcp-03">Nov 30</td>
+			<td class="rtcp-04">Dec 01</td>
+			<td class="rtcp-05">Dec 02</td>
+			<td class="rtcp-06">Dec 03</td>
+		</tr>
+		<tr class="rtrp-05">
+			<td class="rtcp-10">&nbsp;</td>
+			<td class="rtcp-11">&nbsp;</td>
+			<td class="rtcp-12">&nbsp;</td>
+			<td class="rtcp-13">&nbsp;</td>
+			<td class="rtcp-14">&nbsp;</td>
+			<td class="rtcp-15">&nbsp;</td>
+			<td class="rtcp-16">&nbsp;</td>
+		</tr>
+		<tr class="prob120">
+			<td colspan="7"><img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png">Probability High Temperature is 120+ °F<img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png"></td>
+		</tr>
+		<tr class="rtrp-01">
+			<td class="rtcp-20">&nbsp;</td>
+			<td class="rtcp-21">&nbsp;</td>
+			<td class="rtcp-22">&nbsp;</td>
+			<td class="rtcp-23">&nbsp;</td>
+			<td class="rtcp-24">&nbsp;</td>
+			<td class="rtcp-25">&nbsp;</td>
+			<td class="rtcp-26">&nbsp;</td>
+		</tr>
+		<tr class="prob110">
+			<td colspan="7"><img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png">Probability High Temperature is 110+ °F<img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png"></td>
+		</tr>
+		<tr class="rtrp-06">
+			<td class="rtcp-60">&nbsp;</td>
+			<td class="rtcp-61">&nbsp;</td>
+			<td class="rtcp-62">&nbsp;</td>
+			<td class="rtcp-63">&nbsp;</td>
+			<td class="rtcp-64">&nbsp;</td>
+			<td class="rtcp-65">&nbsp;</td>
+			<td class="rtcp-66">&nbsp;</td>
+		</tr>
+		<tr class="prob105">
+			<td colspan="7"><img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png">Probability High Temperature is 105+ °F<img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png"></td>
+		</tr>
+		<tr class="rtrp-02">
+			<td class="rtcp-30">&nbsp;</td>
+			<td class="rtcp-31">&nbsp;</td>
+			<td class="rtcp-32">&nbsp;</td>
+			<td class="rtcp-33">&nbsp;</td>
+			<td class="rtcp-34">&nbsp;</td>
+			<td class="rtcp-35">&nbsp;</td>
+			<td class="rtcp-36">&nbsp;</td>
+		</tr>
+		<tr class="prob100">
+			<td colspan="7"><img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png">Probability High Temperature is 100+ °F<img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearrowb.png"></td>
+		</tr>
+		<tr class="rtrp-03">
+			<td class="rtcp-40">&nbsp;</td>
+			<td class="rtcp-41">&nbsp;</td>
+			<td class="rtcp-42">&nbsp;</td>
+			<td class="rtcp-43">&nbsp;</td>
+			<td class="rtcp-44">&nbsp;</td>
+			<td class="rtcp-45">&nbsp;</td>
+			<td class="rtcp-46">&nbsp;</td>
+		</tr>
+		<tr class="prob90">
+			<td colspan="7"><img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearroww.png">Probability High Temperature is 90+ °F<img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearroww.png"></td>
+		</tr>
+		<tr class="rtrp-04">
+			<td class="rtcp-50">&nbsp;</td>
+			<td class="rtcp-51">&nbsp;</td>
+			<td class="rtcp-52">&nbsp;</td>
+			<td class="rtcp-53">&nbsp;</td>
+			<td class="rtcp-54">&nbsp;</td>
+			<td class="rtcp-55">&nbsp;</td>
+			<td class="rtcp-56">&nbsp;</td>
+		</tr>
+		<tr class="prob80">
+			<td colspan="7"><img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearroww.png">Probability High Temperature is 80+ °F<img id="arrow" src="/images/psr/Webpageimages/heatdashboard/doublearroww.png"></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="infobar" id="dailyRecordsInfobar" onclick="toggleBanner(this.id)">+ Daily Records</div>
+
+<div class="infobox" id="dailyRecordsInfobox">
+<table class="rt">
+	<tbody>
+		<tr class="recordDates">
+			<td class="rtc-00">Nov 27</td>
+			<td class="rtc-01">Nov 28</td>
+			<td class="rtc-02">Nov 29</td>
+			<td class="rtc-03">Nov 30</td>
+			<td class="rtc-04">Dec 01</td>
+			<td class="rtc-05">Dec 02</td>
+			<td class="rtc-06">Dec 03</td>
+		</tr>
+		<tr class="warmMaxRec">
+			<td colspan="7">Daily Record High Maximum Temperatures</td>
+		</tr>
+		<tr class="rtr-01">
+			<td class="rtc-10">87</td>
+			<td class="rtc-11">86</td>
+			<td class="rtc-12">85</td>
+			<td class="rtc-13">84</td>
+			<td class="rtc-14">85</td>
+			<td class="rtc-15">84</td>
+			<td class="rtc-16">83</td>
+		</tr>
+		<tr class="warmMaxRec">
+			<td colspan="7">Daily Record Warm Minimum Temperatures</td>
+		</tr>
+		<tr class="rtr-02">
+			<td class="rtc-20">59</td>
+			<td class="rtc-21">57</td>
+			<td class="rtc-22">60</td>
+			<td class="rtc-23">62</td>
+			<td class="rtc-24">61</td>
+			<td class="rtc-25">58</td>
+			<td class="rtc-26">60</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="infobar" id="countsInfobar" onclick="toggleBanner(this.id)">+ Current Yearly Count of Extreme Temperatures for Phoenix, Arizona</div>
+
+<div class="infobox" id="countsInfobox"><img alt="Graphic showing yearly counts of 110Â° max temperatures for Phoenix" class="image" onclick="openImage(this.src)" src="/images/psr/Heat/max110phx.png" style="cursor: pointer;"> <img alt="Graphic showing yearly counts of 100Â° max temperatures for Phoenix" class="image" onclick="openImage(this.src)" src="/images/psr/Heat/max100phx.png" style="cursor: pointer;"> <img alt="Graphic showing yearly counts of 90Â° min temperatures for Phoenix" class="image" onclick="openImage(this.src)" src="/images/psr/Heat/min90phx.png" style="cursor: pointer;"></div>
+
+<div class="infobar" id="weekOneAnalysisInfobar" onclick="toggleBanner(this.id)">+ Week 1 Overview</div>
+
+<div class="infobox" id="weekOneAnalysisInfobox">
+<p class="afdText">- Dry and tranquil weather will prevail through early next week   with temperatures hovering slightly above normal for late   November.- A Pacific low is expected to track through the Desert Southwest  during the middle of next week, leading to a period with gusty   winds, rain chances, and cooler temperatures.</p>
+</div>
+
+<div class="infobar" id="weekTwoOutlookInfobar" onclick="toggleBanner(this.id)">+ Week 2 Outlook</div>
+
+<div class="infobox" id="weekTwoOutlookInfobox">
+<table class="cpcOutlook">
+	<tbody>
+		<tr>
+			<td class="middle" width="50%">
+			<div id="above">Above: <span class="cpcAbove">22</span>%</div>
+
+			<div id="near">Near: <span class="cpcNear">33</span>%</div>
+
+			<div id="below">Below: <span class="cpcBelow">45</span>%</div>
+			<br>
+			<span id="explain">Probability of the average temperature during<br>
+			next week being above, near, or below normal.</span><br>
+			<br>
+			<a href="https://www.cpc.ncep.noaa.gov/" target="_blank">Get more from the<br>
+			NOAA/Climate Prediction Center</a></td>
+			<td width="50%"><a href="https://www.cpc.ncep.noaa.gov" target="_blank"><img src="https://www.cpc.ncep.noaa.gov/products/predictions/814day/814temp.new.gif" style="text-align: center; max-height: 400px; max-width: 350px;"></a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div class="infobar" id="HeatRiskInfoInfobar" onclick="toggleBanner(this.id)">+ NWS Phoenix Heat Policy &amp; HeatRisk</div>
+
+<div class="infobox" id="HeatRiskInfoInfobox"><br>
+<img alt="Weather-related deaths in Arizona (2010-2020)" src="https://www.weather.gov/images/psr/Webpageimages/heatdashboard/image2.png"><br>
+<span id="caption">Weather-related deaths in Arizona by weather type, 2010-2020. Sources: ADHS (heat) and NOAA (rest).</span>
+
+<p>Heat is the deadliest weather in Arizona. During Arizona's hottest months, the NWS issues alerts to notify the public when unusually hot weather is expected. These alerts are intended to raise awareness and prevent heat illness and death from occurring and mitigate financial impacts. When the NWS issues an alert, it should serve as a signal that on that day it is not "business as usual."</p>
+<br>
+<img alt="HeatRisk and NWS Alerts in June 2017" src="https://www.weather.gov/images/psr/Webpageimages/heatdashboard/image3.gif"><br>
+<span id="caption">Comparative example of HeatRisk (left) and NWS heat alerts (right) during a significant heat event in June 2017. Displayed alerts include Extreme Heat Watches (maroon), Extreme Heat Warnings (magenta), and Heat Advisories (orange). Note the general connection between Major/Extreme HeatRisk levels and alerts. </span>
+
+<p>Collaborative research with the Centers for Disease Control and Prevention (CDC) shows that heat-associated deaths in Arizona can occur with temperatures in the mid 80s and hotter. Research also shows that our bodies have a greater ability to tolerate heat as the summer wears on, known as acclimation. For example, a temperature of 105 °F in May will seem hot, whereas the same temperature in June or July will not seem as hot because our bodies have acclimated to the heat. Hence, there is not one single, constant temperature used to determine when an alert will be issued. In order to better address heat risk and allow you to prepare for upcoming heat events, the NWS developed the experimental HeatRisk product.</p>
+
+<table class="HRtable">
+	<tbody>
+		<tr>
+			<td class="h10">Level 0 (Green): No elevated risk.</td>
+			<td class="h11">Level 1 (Yellow): Minor Risk for those extremely sensitive to heat, especially those without effective cooling and/or adequate hydration.</td>
+			<td class="h12">Level 2 (Orange): Moderate Risk for those who are sensitive to heat, especially those without effective cooling and/or adequate hydration.</td>
+			<td class="h13">Level 3 (Red): Major Risk for much of the population, especially those who are heat sensitive and those without effective cooling and/or adequate hydration.</td>
+			<td class="h14">Level 4 (Magenta): Extreme Risk for entire population due to long duration heat, with little to no relief overnight.</td>
+		</tr>
+		<tr>
+			<td class="h00">&nbsp;</td>
+			<td class="h01">&nbsp;</td>
+			<td class="h02">&nbsp;</td>
+			<td class="h03">&nbsp;</td>
+			<td class="h04">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>HeatRisk provides a quick view of potentially impactful heat conditions over the upcoming seven days based on how much above normal high and low temperatures are, the duration of unusual heat, and humidity (as represented by overnight low temperatures). HeatRisk is portrayed in a numeric (0-4) and color (green/yellow/orange/red/magenta) scale which is similar in approach to the Air Quality Index (AQI) or the UV Index. It provides one value each day that indicates the approximate level of heat risk concern for any location, along with identifying the groups who are most at risk. This product is complementary to the official NWS Watch/Warning/Advisory program and is meant to provide continuously available heat risk guidance for those decision makers and heat sensitive populations who need to take actions at levels that may be below current NWS heat product levels.</p>
+
+<table class="heatriskExample">
+	<tbody>
+		<tr>
+			<td><a href="https://www.wpc.ncep.noaa.gov/heatrisk/historical/charts/MaxT/HeatRisk-v2.6-USW00023183-MaxT.png" target="_blank"><img alt="HeatRisk thresholds for high temperature at KPHX" src="https://www.wpc.ncep.noaa.gov/heatrisk/historical/charts/MaxT/HeatRisk-v2.6-USW00023183-MaxT.png"></a></td>
+			<td><a href="https://www.wpc.ncep.noaa.gov/heatrisk/historical/charts/MinT/HeatRisk-v2.6-USW00023183-MinT.png" target="_blank"><img alt="HeatRisk thresholds for low temperature at KPHX" src="https://www.wpc.ncep.noaa.gov/heatrisk/historical/charts/MinT/HeatRisk-v2.6-USW00023183-MinT.png"></a></td>
+		</tr>
+		<tr>
+			<td colspan="2">HeatRisk temperature thresholds for Phoenix Sky Harbor International Airport.<br>
+			Click image for full version. Other locations available <a href="https://www.wpc.ncep.noaa.gov/heatrisk/historical/" target="_blank">here</a>.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>When "Major" or "Extreme" HeatRisk conditions are forecast, an Extreme Heat Watch or Extreme Heat Warning will be issued. An Extreme Heat Watch conveys a moderate (50%) confidence that extreme heat will occur. If confidence increases to a high (80%+) level, an Extreme Heat Warning is issued. An exception would be in the case of a mixture of periods of recommended Warnings and Advisories, where forecaster discretion and coordination with surrounding offices should determine the appropriate Legacy Product and messaging strategy. Both alerts are a way to give public and emergency officials a "heads up" that extreme temperatures are expected. Note that many lower elevation locations across the Southwest which experience chronic heat do not receive the lesser Heat Advisory alert.</p>
+<br>
+<br>
+<img alt="Maricopa County Heat-Related ER Visits in 2022 by HeatRisk Category" src="https://www.weather.gov/images/psr/Webpageimages/heatdashboard/HeatRisk_Verification_Maricopa.png"><br>
+<span id="caption">Daily rate of emergency room visits due to heat-related illness across Maricopa County in 2022, shaded by HeatRisk category. Inset displays daily values averaged by HeatRisk category.</span>
+
+<p>Based on an analysis of emergency room visits across Maricopa County during 2020 (and subsequent years), it has been found that HeatRisk categories accurately describe the level of heat-related illness. During the hottest days, with "Major (High)" and "Extreme (Very High)" HeatRisk categories, spikes in ER visits were noted. These days were generally coincident with the issuance of Extreme Heat Warnings. For lower risk days, ER visits were still noted but to a lesser degree. When averaging by HeatRisk category, there is a steady increase in ER visits for heat-related illness as intensity levels increase. Notably, heat-related illness was observed even on "Low" days, clearly indicating that even without official alerts heat can pose a significant health threat if precautions are not taken.</p>
+<br>
+<br>
+<img alt="City of Phoenix Fire Department Daily Heat-Related Calls" src="https://www.weather.gov/images/psr/Webpageimages/heatdashboard/HeatRisk_Verification_CityOfPhoenix.png"><br>
+<span id="caption">Daily rate of heat-related calls received by the City of Phoenix Fire Department in 2022, shaded by HeatRisk category. Inset displays daily values averaged by HeatRisk category.</span>
+
+<p>A similar analysis of heat-related emergency calls received by the City of Phoenix Fire Department showed a clear connection between call volume and HeatRisk category. During 2022, the largest spikes in calls were coincident with episodes including "Major (High) " and "Extreme (Very High)" HeatRisk levels. Averaged by HeatRisk category (inset), a clear stepwise function is revealed. Notably, calls are still received even on "Low" days, supporting continued risk to very sensitive groups.</p>
+</div>
+
+<div class="infobar" id="heatSafetyInfobar" onclick="toggleBanner(this.id)">+ Heat Safety</div>
+
+<div class="infobox" id="heatSafetyInfobox"><br>
+<br>
+<img alt="Heat Safety" src="https://www.weather.gov/images/psr/Webpageimages/heatdashboard/image1.png">
+<p><span id="subheadline">Preventing Heat-Related Illness</span></p>
+
+<p>Your body keeps itself cool by letting heat escape through the skin, and by evaporating sweat (perspiration). If your body does not cool properly or does not cool enough, you might suffer from a heat-related illness.</p>
+
+<p>Anyone can be susceptible to heat-related illness. Those at greatest risk are infants and young children, adults over 65, people who are homeless, people who are overweight, people who overexert during work or exercise, and people who are physically ill or on certain medications, such as for depression, insomnia, or poor circulation. Heat-related illness may be serious or even deadly if unattended.</p>
+
+<p>Staying healthy during the summer is easier if you take the time to protect yourself by making sure you are drinking enough water and limiting your exposure to the heat. Follow these simple rules:</p>
+
+<ul>
+	<li><span id="bold">Drink water.</span> Even people that stay mostly indoors all day should drink at least 2 liters of water per day. People that spend time outdoors should drink 1 to 2 liters per hour that they are outdoors. People that do strenuous activity outdoors should be very careful, being your body can lose up to 4 liters of water per hour during strenuous activity. You should carry water with you and drink even if you do not feel thirsty. Be heat safe and avoid alcohol, which dehydrate the body. Avoid using salt tablets unless directed to do so by a physician.</li>
+	<li><span id="bold">Dress for the heat.</span> Wear lightweight, light-colored clothing. Light colors will reflect away some of the sun's energy. It is also a good idea to wear hats or to use an umbrella. Always apply sunscreen to exposed skin.</li>
+	<li><span id="bold">Eat small meals and eat more often.</span> Avoid foods that are high in protein which increase metabolic heat.</li>
+	<li><span id="bold">Monitor Those at High Risk.</span> Check on friends, family, and neighbors for signs of heat exhaustion or heat stroke. Infants and young children, of course, need much more frequent watching.</li>
+	<li><span id="bold">Slow down.</span> Avoid strenuous activity. If you must do strenuous activity, do it during the coolest part of the day, which is usually in the morning between 4:00 a.m. and 7:00 a.m.</li>
+	<li><span id="bold">Stay indoors when possible.</span></li>
+	<li><span id="bold">Take regular breaks</span> when engaged in physical activity on warm days. Take time out to find a cool place. If you recognize that you, or someone else, are showing symptoms of a heat-related illness, stop activity and find a cool place. Remember, have fun, but stay cool!</li>
+</ul>
+<a href="https://www.weather.gov/images/wrn/Infographics/2022/heat-symptoms-2022-final.png" target="_blank"><img alt="Heat Stroke vs Heat Exhaustion" src="https://www.weather.gov/images/wrn/Infographics/2022/heat-symptoms-2022-final.png"></a>
+
+<p><span id="subheadline">Signs &amp; Symptoms of Heat-Related Illness</span></p>
+
+<p>When temperatures are on the rise, watch for the following symptoms:</p>
+
+<ul>
+	<li><span id="bold">Thirst:</span> By the time your body tells you that you are thirsty, you are already mildly dehydrated.</li>
+	<li><span id="bold">Heat cramps:</span> Heat cramps are muscular pains and spasms due to heavy exertion. They usually involve the abdominal muscles or the legs. The loss of water and salt from heavy sweating causes heat cramps.</li>
+	<li><span id="bold">Heat Exhaustion:</span> Heat exhaustion is less dangerous than heat stroke. It typically occurs when people exercise heavily or work in a warm, humid place where body fluids are lost through heavy sweating. Fluid loss causes blood flow to decrease in the vital organs, resulting in a form of shock. With heat exhaustion, sweat does not evaporate as it should, possibly because of high humidity or too many layers of clothing. As a result, the body is not cooled properly. Signals include cool, moist, pale, flushed or red skin; heavy sweating; headache; nausea or vomiting; dizziness; and exhaustion. Body temperature will be near normal.</li>
+	<li><span id="bold">Heat Stroke:</span> Also known as sunstroke, heat stroke is life-threatening. The victim's temperature control system, which produces sweating to cool the body, stops working. The body temperature can rise so high that brain damage and death may result if the body is not cooled quickly. Signals include hot, red and dry skin; changes in consciousness; rapid, weak pulse; and rapid, shallow breathing. Body temperature can be very high—sometimes as high as 105 °F.</li>
+</ul>
+
+<p><span id="subheadline">Stages of Heat-Related Illness</span></p>
+
+<p>Heat-related illness usually comes in stages. The signal of the first stage is thirst. Drinking water at this stage can prevent you from progressing to the more serious kinds of heat related illnesses. The next stage is muscle cramps. These cramps can be mild or very painful. If you are caring for a person who has heat cramps, have him or her stop activity and rest. If the person is fully awake and alert, have him or her drink small amounts of cool water or a commercial sports drink. Gently stretch the cramped muscle and hold the stretch for about 20 seconds, then gently massage the muscle. Repeat these steps if necessary. If the victim has no other signals of heat-related illness, the person may resume activity after the cramps stop.</p>
+
+<p>The signals of the next, more serious stage of a heat-related illness (often called heat exhaustion) include:</p>
+
+<ul>
+	<li>Cool, moist, pale skin (the skin may be red right after physical activity).</li>
+	<li>Headache.</li>
+	<li>Dizziness and weakness or exhaustion.</li>
+	<li>Nausea.</li>
+	<li>The skin may or may not feel hot.</li>
+</ul>
+
+<p>The warning signs of the most serious stage of a heat-related illness (often called heat stroke or sun stroke) vary but may include:</p>
+
+<ul>
+	<li>Vomiting.</li>
+	<li>Confusion.</li>
+	<li>Throbbing headache.</li>
+	<li>Decreased alertness level or complete loss of consciousness.</li>
+	<li>High body temperature (sometimes as high as 105 °F).</li>
+	<li>Skin may still be moist or the victim may stop sweating and the skin may be red, hot and dry.</li>
+	<li>Rapid, weak pulse.</li>
+	<li>Rapid, shallow breathing.</li>
+	<li>Seizures.</li>
+</ul>
+
+<p><span style="background-color: yellow; font-weight: bold;">NOTE: Heat stroke is life threatening. Call 9-1-1 or the local emergency number if you are suffering from any of the above symptoms.</span></p>
+
+<p><span id="subheadline">General Care for Heat Emergencies</span></p>
+
+<p>General care for heat emergencies include cooling the body, giving fluids, and minimizing shock. For specific heat-related emergencies, follow these steps:</p>
+
+<ul>
+	<li><span id="bold">For heat cramps or heat exhaustion:</span> Get the person to a cooler place and have the person rest in a comfortable position. If the person is fully awake and alert, give a half glass of cool water every 15 minutes. Do not let him or her drink too quickly. Do not give liquids with alcohol in them, as they can make conditions worse. Remove or loosen tight clothing and apply cool, wet cloths such as towels or wet sheets or mist with water. Get the person into an air conditioned space if possible. Call 9-1-1 or the local emergency number if the person refuses water, vomits or loses consciousness.</li>
+	<li><span id="bold">For heat stroke:</span> Heat stroke is a life-threatening situation! Help is needed fast. Call 9-1-1 or your local EMS number. Move the person to a cooler place. Quickly cool the body using any means available, including cool water and ice. If you have ice packs or cold packs, wrap them in a cloth and place them on each of the victim's wrists and ankles, in the armpits and on the neck to cool the large blood vessels. (Do not use rubbing alcohol because it closes the skin's pores and prevents heat loss.) Wrap wet sheets around the body and place the person in front of a fan or air conditioner. Watch for signals of breathing problems and make sure the airway is clear. Keep the person lying down.</li>
+</ul>
+
+<p><span id="subheadline">Additional Resources:</span><br>
+<a href="https://www.azdhs.gov/preparedness/epidemiology-disease-control/extreme-weather/heat-safety/index.php#heat-home">ADHS Extreme Weather &amp; Public Health</a> | <a href="https://www.caloes.ca.gov/ICESite/Pages/Summer-Heat-Resources.aspx">CalOES Summer Heat Resources</a> | <a href="https://www.cdc.gov/disasters/extremeheat/index.html">CDC Extreme Heat</a> | <a href="https://www.epa.gov/natural-disasters/extreme-heat">EPA Extreme Heat</a></p>
+</div>
+
+<div class="infobar" id="historicalHeatCalendarInfobar" onclick="toggleBanner(this.id)">+ Historical Heat Warning Calendar</div>
+
+<div class="infobox" id="historicalHeatCalendarInfobox">
+<div id="heatCalendar"><div class="hcTopBar"><button id="hcPrevYear" title="Previous year">◀</button><select id="hcYearSelect" aria-label="Select heat calendar year"><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option></select><button id="hcNextYear" title="Next year">▶</button></div><div class="hcSummary"><div class="hcSummarySite">Phoenix</div><div class="hcSummaryYear">2026</div><div class="hcSummaryStats"><div class="hcSummaryMetrics"><div class="hcSummaryMetric"><span class="hcSummaryMetricValue">47</span><span class="hcSummaryMetricLabel">Warning Days<br>Yearly</span><span class="hcSummaryMetricSubtext">&nbsp;</span></div><div class="hcSummaryMetric"><span class="hcSummaryMetricValue">47</span><span class="hcSummaryMetricLabel">Warning Days<br>Through NOV 27</span><span class="hcSummaryMetricSubtext">&nbsp;</span></div><div class="hcSummaryMetric"><span class="hcSummaryMetricValue">7</span><span class="hcSummaryMetricLabel">Events</span><span class="hcSummaryMetricSubtext">&nbsp;</span></div><div class="hcSummaryMetric"><span class="hcSummaryMetricValue">18</span><span class="hcSummaryMetricLabel">Days</span><span class="hcSummaryMetricSubtext">LONGEST EVENT</span></div></div><div class="hcSummaryNote" style="margin-top: 8px;">To-date average through NOV 27: 22.0 days (25.0 above average)</div><div class="hcSummaryDivider"></div><div class="hcSummaryDetails"><div><span class="hcSummaryDetailLabel">First Warning</span><span class="hcSummaryDetailValue">MAR 19</span><div class="hcSummaryHeadline">...EARLIEST START ON RECORD...</div></div><div><span class="hcSummaryDetailLabel">Last Warning</span><span class="hcSummaryDetailValue">SEP 10</span></div></div><div class="hcSummaryDivider"></div><div class="hcSummaryUpdated"><span class="hcSummaryUpdatedLabel">Data Updated</span><br>Nov 27, 2026, 3:05 PM MST</div></div></div><div class="hcCalendarGrid"><div class="hcMonth"><div class="hcMonthTitle">January</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div><div class="hcDay"><div class="hcDateNumber">31</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">February</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">March</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay warning" data-date="2026-03-19" data-event-keys="202603191800"><div class="hcDateNumber">19</div><div class="hcDurationBadge">4d</div></div><div class="hcDay warning" data-date="2026-03-20" data-event-keys="202603191800"><div class="hcDateNumber">20</div><div class="hcDurationBadge">4d</div></div><div class="hcDay warning" data-date="2026-03-21" data-event-keys="202603191800"><div class="hcDateNumber">21</div><div class="hcDurationBadge">4d</div></div><div class="hcDay warning" data-date="2026-03-22" data-event-keys="202603191800"><div class="hcDateNumber">22</div><div class="hcDurationBadge">4d</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div><div class="hcDay"><div class="hcDateNumber">31</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">April</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">May</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay warning" data-date="2026-05-10" data-event-keys="202605101700"><div class="hcDateNumber">10</div><div class="hcDurationBadge">3d</div></div><div class="hcDay warning" data-date="2026-05-11" data-event-keys="202605101700"><div class="hcDateNumber">11</div><div class="hcDurationBadge">3d</div></div><div class="hcDay warning" data-date="2026-05-12" data-event-keys="202605101700"><div class="hcDateNumber">12</div><div class="hcDurationBadge">3d</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div><div class="hcDay"><div class="hcDateNumber">31</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">June</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay warning" data-date="2026-06-24" data-event-keys="202606241700"><div class="hcDateNumber">24</div><div class="hcDurationBadge">2d</div></div><div class="hcDay warning" data-date="2026-06-25" data-event-keys="202606241700"><div class="hcDateNumber">25</div><div class="hcDurationBadge">2d</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">July</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay warning" data-date="2026-07-07" data-event-keys="202607071700"><div class="hcDateNumber">7</div><div class="hcDurationBadge">4d</div></div><div class="hcDay warning" data-date="2026-07-08" data-event-keys="202607071700"><div class="hcDateNumber">8</div><div class="hcDurationBadge">4d</div></div><div class="hcDay warning" data-date="2026-07-09" data-event-keys="202607071700"><div class="hcDateNumber">9</div><div class="hcDurationBadge">4d</div></div><div class="hcDay warning" data-date="2026-07-10" data-event-keys="202607071700"><div class="hcDateNumber">10</div><div class="hcDurationBadge">4d</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay warning" data-date="2026-07-23" data-event-keys="202607231700"><div class="hcDateNumber">23</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-24" data-event-keys="202607231700"><div class="hcDateNumber">24</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-25" data-event-keys="202607231700"><div class="hcDateNumber">25</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-26" data-event-keys="202607231700"><div class="hcDateNumber">26</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-27" data-event-keys="202607231700"><div class="hcDateNumber">27</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-28" data-event-keys="202607231700"><div class="hcDateNumber">28</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-29" data-event-keys="202607231700"><div class="hcDateNumber">29</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-30" data-event-keys="202607231700"><div class="hcDateNumber">30</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-07-31" data-event-keys="202607231700"><div class="hcDateNumber">31</div><div class="hcDurationBadge veryLong">18d</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">August</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay warning" data-date="2026-08-01" data-event-keys="202607231700"><div class="hcDateNumber">1</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-02" data-event-keys="202607231700"><div class="hcDateNumber">2</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-03" data-event-keys="202607231700"><div class="hcDateNumber">3</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-04" data-event-keys="202607231700"><div class="hcDateNumber">4</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-05" data-event-keys="202607231700"><div class="hcDateNumber">5</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-06" data-event-keys="202607231700"><div class="hcDateNumber">6</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-07" data-event-keys="202607231700"><div class="hcDateNumber">7</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-08" data-event-keys="202607231700"><div class="hcDateNumber">8</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay warning" data-date="2026-08-09" data-event-keys="202607231700"><div class="hcDateNumber">9</div><div class="hcDurationBadge veryLong">18d</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay warning" data-date="2026-08-17" data-event-keys="202608171700"><div class="hcDateNumber">17</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-18" data-event-keys="202608171700"><div class="hcDateNumber">18</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-19" data-event-keys="202608171700"><div class="hcDateNumber">19</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-20" data-event-keys="202608171700"><div class="hcDateNumber">20</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-21" data-event-keys="202608171700"><div class="hcDateNumber">21</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-22" data-event-keys="202608171700"><div class="hcDateNumber">22</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-23" data-event-keys="202608171700"><div class="hcDateNumber">23</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-24" data-event-keys="202608171700"><div class="hcDateNumber">24</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-25" data-event-keys="202608171700"><div class="hcDateNumber">25</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-26" data-event-keys="202608171700"><div class="hcDateNumber">26</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-27" data-event-keys="202608171700"><div class="hcDateNumber">27</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-28" data-event-keys="202608171700"><div class="hcDateNumber">28</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay warning" data-date="2026-08-29" data-event-keys="202608171700"><div class="hcDateNumber">29</div><div class="hcDurationBadge veryLong">13d</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div><div class="hcDay"><div class="hcDateNumber">31</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">September</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay warning" data-date="2026-09-08" data-event-keys="202609081700"><div class="hcDateNumber">8</div><div class="hcDurationBadge">3d</div></div><div class="hcDay warning" data-date="2026-09-09" data-event-keys="202609081700"><div class="hcDateNumber">9</div><div class="hcDurationBadge">3d</div></div><div class="hcDay warning" data-date="2026-09-10" data-event-keys="202609081700"><div class="hcDateNumber">10</div><div class="hcDurationBadge">3d</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">October</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div><div class="hcDay"><div class="hcDateNumber">31</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">November</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay today"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div></div></div><div class="hcMonth"><div class="hcMonthTitle">December</div><div class="hcDow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="hcDays"><div class="hcDay empty"></div><div class="hcDay empty"></div><div class="hcDay"><div class="hcDateNumber">1</div></div><div class="hcDay"><div class="hcDateNumber">2</div></div><div class="hcDay"><div class="hcDateNumber">3</div></div><div class="hcDay"><div class="hcDateNumber">4</div></div><div class="hcDay"><div class="hcDateNumber">5</div></div><div class="hcDay"><div class="hcDateNumber">6</div></div><div class="hcDay"><div class="hcDateNumber">7</div></div><div class="hcDay"><div class="hcDateNumber">8</div></div><div class="hcDay"><div class="hcDateNumber">9</div></div><div class="hcDay"><div class="hcDateNumber">10</div></div><div class="hcDay"><div class="hcDateNumber">11</div></div><div class="hcDay"><div class="hcDateNumber">12</div></div><div class="hcDay"><div class="hcDateNumber">13</div></div><div class="hcDay"><div class="hcDateNumber">14</div></div><div class="hcDay"><div class="hcDateNumber">15</div></div><div class="hcDay"><div class="hcDateNumber">16</div></div><div class="hcDay"><div class="hcDateNumber">17</div></div><div class="hcDay"><div class="hcDateNumber">18</div></div><div class="hcDay"><div class="hcDateNumber">19</div></div><div class="hcDay"><div class="hcDateNumber">20</div></div><div class="hcDay"><div class="hcDateNumber">21</div></div><div class="hcDay"><div class="hcDateNumber">22</div></div><div class="hcDay"><div class="hcDateNumber">23</div></div><div class="hcDay"><div class="hcDateNumber">24</div></div><div class="hcDay"><div class="hcDateNumber">25</div></div><div class="hcDay"><div class="hcDateNumber">26</div></div><div class="hcDay"><div class="hcDateNumber">27</div></div><div class="hcDay"><div class="hcDateNumber">28</div></div><div class="hcDay"><div class="hcDateNumber">29</div></div><div class="hcDay"><div class="hcDateNumber">30</div></div><div class="hcDay"><div class="hcDateNumber">31</div></div></div></div></div><div class="hcFooterNote">Warning days are counted when a warning is in effect at 3 PM local time.</div></div>
+</div>
+
+<div class="infobar" id="historicalHeatStatisticsInfobar" onclick="toggleBanner(this.id)">+ Heat Climate Stats</div>
+
+<div class="infobox" id="historicalHeatStatisticsInfobox">
+<p><a href="https://www.weather.gov/psr/local_climate">Local climate information available here.</a></p>
+</div>
+<!-- javascript --><script type="application/javascript">
+
+/*
+  Historical Heat Warning Calendar module.
+
+  This module receives the selected station ID from the main Heat Dashboard
+  through HeatCalendar.load(sid), then loads local static JSON files rather
+  than calling the IEM API directly.
+*/
+var HeatCalendar = (function () {
+
+  var CONFIG = {
+    startYear: 2006,
+    endYear: new Date().getFullYear(),
+    defaultYear: new Date().getFullYear(),
+
+    // Static calendar JSON files are stored here.
+    dataBasePath: "/source/psr/heatdashboard/calendar"
+  };
+
+  var SITE_START_YEAR = {
+    phoenix: 2006,
+    yuma: 2006,
+    elcentro: 2006,
+    tucson: 2013
+  };
+
+  var SID_TO_SITE = {
+    PHX: "phoenix",
+    Phoenix: "phoenix",
+    phoenix: "phoenix",
+
+    YUM: "yuma",
+    Yuma: "yuma",
+    yuma: "yuma",
+
+    ELC: "elcentro",
+    ElCentro: "elcentro",
+    elcentro: "elcentro",
+
+    TUS: "tucson",
+    Tucson: "tucson",
+    tucson: "tucson"
+  };
+
+  function resolveSiteKey(sid) {
+    if (SID_TO_SITE[sid]) {
+      return SID_TO_SITE[sid];
+    }
+
+    var normalized = String(sid || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+    if (normalized.indexOf("phoenix") >= 0 || normalized === "phx") {
+      return "phoenix";
+    }
+
+    if (normalized.indexOf("yuma") >= 0 || normalized === "yum") {
+      return "yuma";
+    }
+
+    if (
+      normalized.indexOf("elcentro") >= 0 || normalized === "elc"
+    ) {
+      return "elcentro";
+    }
+
+    if (normalized.indexOf("tucson") >= 0 || normalized === "tus") {
+      return "tucson";
+    }
+
+    return null;
+  }
+
+
+  var MONTH_NAMES = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
+  var DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  var app = {
+    sid: null,
+    siteKey: null,
+    year: CONFIG.defaultYear,
+    data: null,
+    dataLoadedAt: null,
+    events: new Map(),
+    dates: new Map(),
+    eventDates: new Map(),
+    cellsByDate: new Map(),
+    initialized: false
+  };
+
+  /*
+    Cache site JSON in memory so switching between sites does not repeatedly
+    download the same static files during one page session.
+  */
+  var jsonCache = {};
+
+  function load(sid) {
+    var siteKey = resolveSiteKey(sid);
+
+    if (!app.initialized) {
+      initializeShell();
+    }
+
+    if (!siteKey) {
+      renderUnsupportedSite(sid);
+      return;
+    }
+
+    app.sid = sid;
+    app.siteKey = siteKey;
+
+    app.year = clampYearForSite(Number(document.getElementById("hcYearSelect").value) || CONFIG.defaultYear);
+    buildYearSelector();
+
+    setLoadingState();
+
+    if (jsonCache[siteKey]) {
+      app.data = jsonCache[siteKey].data;
+      app.dataLoadedAt = jsonCache[siteKey].loadedAt;
+      buildDataModel(app.data);
+      renderCalendar();
+      return;
+    }
+
+    fetch(CONFIG.dataBasePath + "/" + siteKey + ".json")
+      .then(function(response) {
+        if (!response.ok) {
+          throw new Error("Unable to load " + CONFIG.dataBasePath + "/" + siteKey + ".json");
+        }
+        return response.json();
+      })
+      .then(function(data) {
+        var loadedAt = new Date().toISOString();
+        jsonCache[siteKey] = {
+          data: data,
+          loadedAt: loadedAt
+        };
+        app.data = data;
+        app.dataLoadedAt = loadedAt;
+        buildDataModel(data);
+        renderCalendar();
+      })
+      .catch(function(error) {
+        renderError(error);
+      });
+  }
+
+  function initializeShell() {
+    var calendarEl = document.getElementById("heatCalendar");
+    if (!calendarEl) return;
+
+    calendarEl.innerHTML =
+      '<div class="hcTopBar">' +
+        '<button id="hcPrevYear" title="Previous year">◀</button>' +
+        '<select id="hcYearSelect" aria-label="Select heat calendar year"></select>' +
+        '<button id="hcNextYear" title="Next year">▶</button>' +
+      '</div>' +
+      '<div class="hcSummary">' +
+        '<div class="hcSummarySite"></div>' +
+        '<div class="hcSummaryYear"></div>' +
+        '<div class="hcSummaryStats">Loading...</div>' +
+      '</div>' +
+      '<div class="hcCalendarGrid"></div>' +
+      '<div class="hcFooterNote">Warning days are counted when a warning is in effect at 3 PM local time.</div>';
+
+    if (!document.getElementById("hcPopupOverlay")) {
+      document.body.insertAdjacentHTML("beforeend",
+        '<div id="hcPopupOverlay"></div>' +
+        '<div id="hcPopup" role="dialog" aria-modal="true">' +
+          '<button id="hcClosePopup" title="Close">×</button>' +
+          '<div id="hcPopupContent"></div>' +
+        '</div>'
+      );
+    }
+
+    buildYearSelector();
+
+    document.getElementById("hcPrevYear").addEventListener("click", function() {
+      changeYear(-1);
+    });
+
+    document.getElementById("hcNextYear").addEventListener("click", function() {
+      changeYear(1);
+    });
+
+    document.getElementById("hcYearSelect").addEventListener("change", function() {
+      app.year = clampYearForSite(Number(this.value));
+      this.value = app.year;
+      closePopup();
+      clearEventHighlight();
+      renderCalendar();
+    });
+
+    document.getElementById("hcClosePopup").addEventListener("click", closePopup);
+    document.getElementById("hcPopupOverlay").addEventListener("click", closePopup);
+    document.getElementById("heatCalendar").addEventListener("mouseleave", clearEventHighlight);
+
+    app.initialized = true;
+  }
+
+  function buildYearSelector() {
+    var select = document.getElementById("hcYearSelect");
+    if (!select) return;
+
+    var siteStartYear = getSiteStartYear();
+    app.year = clampYearForSite(app.year || CONFIG.defaultYear);
+    select.innerHTML = "";
+
+    for (var year = CONFIG.endYear; year >= siteStartYear; year--) {
+      var option = document.createElement("option");
+      option.value = year;
+      option.textContent = year;
+      select.appendChild(option);
+    }
+
+    select.value = app.year;
+  }
+
+  function changeYear(delta) {
+    var newYear = app.year + delta;
+    var siteStartYear = getSiteStartYear();
+
+    if (newYear < siteStartYear || newYear > CONFIG.endYear) return;
+
+    app.year = newYear;
+    document.getElementById("hcYearSelect").value = app.year;
+    closePopup();
+    clearEventHighlight();
+    renderCalendar();
+  }
+
+  function getSiteStartYear() {
+    return SITE_START_YEAR[app.siteKey] || CONFIG.startYear;
+  }
+
+  function clampYearForSite(year) {
+    var siteStartYear = getSiteStartYear();
+
+    if (year < siteStartYear) {
+      return siteStartYear;
+    }
+
+    if (year > CONFIG.endYear) {
+      return CONFIG.endYear;
+    }
+
+    return year;
+  }
+
+  function setLoadingState() {
+    var grid = document.querySelector("#heatCalendar .hcCalendarGrid");
+    var site = app.data ? app.data.site : siteNameFromKey(app.siteKey);
+
+    document.querySelector("#heatCalendar .hcSummarySite").textContent = site || "";
+    document.querySelector("#heatCalendar .hcSummaryYear").textContent = app.year;
+    document.querySelector("#heatCalendar .hcSummaryStats").textContent = "Loading...";
+    grid.innerHTML = '<div class="hcLoading">Loading historical heat warning calendar...</div>';
+  }
+
+  function renderUnsupportedSite(sid) {
+    var grid = document.querySelector("#heatCalendar .hcCalendarGrid");
+
+    if (!grid) {
+      return;
+    }
+
+    app.data = null;
+    app.dataLoadedAt = null;
+    app.events.clear();
+    app.dates.clear();
+    app.eventDates.clear();
+    app.cellsByDate.clear();
+
+    document.querySelector("#heatCalendar .hcSummarySite").textContent = escapeHtml(sid || "Selected Site");
+    document.querySelector("#heatCalendar .hcSummaryYear").textContent = app.year;
+    document.querySelector("#heatCalendar .hcSummaryStats").textContent =
+      "Historical Heat Warning Calendar is not available for this location.";
+
+    grid.innerHTML =
+      '<div class="hcLoading">No historical heat warning calendar data are configured for ' +
+      escapeHtml(sid || "this site") +
+      '.</div>';
+  }
+
+  function renderError(error) {
+    document.querySelector("#heatCalendar .hcSummaryStats").textContent = "Unable to load calendar data.";
+    document.querySelector("#heatCalendar .hcCalendarGrid").innerHTML =
+      '<div class="hcLoading">' + escapeHtml(error.message) + '</div>';
+  }
+
+
+  function issueTimeEventKey(event) {
+    if (!event.issue) {
+      return event.event_key || "";
+    }
+
+    return String(event.issue)
+      .replace(/[-:]/g, "")
+      .replace(".000", "")
+      .replace("Z", "")
+      .replace("T", "")
+      .slice(0, 12);
+  }
+
+  function normalizedEvent(event) {
+    var key = issueTimeEventKey(event);
+
+    var copy = Object.assign({}, event);
+    copy.event_key = key;
+
+    return copy;
+  }
+
+  function buildDataModel(data) {
+    app.events.clear();
+    app.dates.clear();
+    app.eventDates.clear();
+    app.cellsByDate.clear();
+
+    var events = data.events || [];
+
+    events.forEach(function(rawEvent) {
+      var event = normalizedEvent(rawEvent);
+
+      app.events.set(event.event_key, event);
+      app.eventDates.set(event.event_key, event.dates || []);
+
+      (event.dates || []).forEach(function(dateString) {
+        if (!app.dates.has(dateString)) {
+          app.dates.set(dateString, []);
+        }
+
+        app.dates.get(dateString).push(event.event_key);
+      });
+    });
+  }
+
+  function renderCalendar() {
+    if (!app.data) return;
+
+    app.cellsByDate.clear();
+
+    var grid = document.querySelector("#heatCalendar .hcCalendarGrid");
+    grid.innerHTML = "";
+
+    renderSummary();
+
+    for (var month = 0; month < 12; month++) {
+      grid.appendChild(renderMonth(app.year, month));
+    }
+  }
+
+  function renderSummary() {
+    var stats = getYearStats(app.year);
+    var toDateStats = getToDateStats(app.year);
+    var firstStartStats = getFirstStartStats(app.year);
+    var lastEndStats = getLastEndStats(app.year);
+
+    document.querySelector("#heatCalendar .hcSummarySite").textContent = app.data.site || siteNameFromKey(app.siteKey);
+    document.querySelector("#heatCalendar .hcSummaryYear").textContent = app.year;
+
+    var seasonalRankSubtext = getSeasonalRankSubtext(app.year, stats.warningDayCount);
+    var rankSubtext = getToDateRankSubtext(toDateStats);
+    var avgLine = getToDateAverageLine(toDateStats);
+    var firstDate = stats.firstDate ? compactDateUpper(stats.firstDate) : "--";
+    var lastDate = stats.lastDate ? compactDateUpper(stats.lastDate) : "--";
+    var firstStartLine = getFirstStartRecordLine(firstStartStats);
+    var lastEndLine = getLastEndRecordLine(lastEndStats);
+    var updatedLine = getDataUpdatedLine();
+
+    document.querySelector("#heatCalendar .hcSummaryStats").innerHTML =
+      '<div class="hcSummaryMetrics">' +
+        '<div class="hcSummaryMetric">' +
+          '<span class="hcSummaryMetricValue">' + stats.warningDayCount + '</span>' +
+          '<span class="hcSummaryMetricLabel">Warning Days<br>Yearly</span>' +
+          '<span class="hcSummaryMetricSubtext">' + escapeHtml(seasonalRankSubtext) + '</span>' +
+        '</div>' +
+        '<div class="hcSummaryMetric">' +
+          '<span class="hcSummaryMetricValue">' + (toDateStats ? toDateStats.count : '--') + '</span>' +
+          '<span class="hcSummaryMetricLabel">Warning Days<br>Through ' + escapeHtml(toDateStats ? toDateStats.cutoffLabel : 'To Date') + '</span>' +
+          '<span class="hcSummaryMetricSubtext">' + escapeHtml(rankSubtext) + '</span>' +
+        '</div>' +
+        '<div class="hcSummaryMetric">' +
+          '<span class="hcSummaryMetricValue">' + stats.eventCount + '</span>' +
+          '<span class="hcSummaryMetricLabel">Event' + plural(stats.eventCount) + '</span>' +
+          '<span class="hcSummaryMetricSubtext">&nbsp;</span>' +
+        '</div>' +
+        '<div class="hcSummaryMetric">' +
+          '<span class="hcSummaryMetricValue">' + stats.longestEventDays + '</span>' +
+          '<span class="hcSummaryMetricLabel">Day' + plural(stats.longestEventDays) + '</span>' +
+          '<span class="hcSummaryMetricSubtext">LONGEST EVENT</span>' +
+        '</div>' +
+      '</div>' +
+      avgLine +
+      '<div class="hcSummaryDivider"></div>' +
+      '<div class="hcSummaryDetails">' +
+        '<div>' +
+          '<span class="hcSummaryDetailLabel">First Warning</span>' +
+          '<span class="hcSummaryDetailValue">' + escapeHtml(firstDate) + '</span>' +
+          firstStartLine +
+        '</div>' +
+        '<div>' +
+          '<span class="hcSummaryDetailLabel">Last Warning</span>' +
+          '<span class="hcSummaryDetailValue">' + escapeHtml(lastDate) + '</span>' +
+          lastEndLine +
+        '</div>' +
+      '</div>' +
+      '<div class="hcSummaryDivider"></div>' +
+      updatedLine;
+  }
+
+  function getYearStats(year) {
+    var warningDayCount = 0;
+    var eventKeys = new Set();
+    var longestEventDays = 0;
+    var firstDate = null;
+    var lastDate = null;
+
+    app.dates.forEach(function(keys, dateString) {
+      if (!dateString.startsWith(String(year))) return;
+
+      warningDayCount++;
+
+      if (!firstDate || dateString < firstDate) firstDate = dateString;
+      if (!lastDate || dateString > lastDate) lastDate = dateString;
+
+      keys.forEach(function(key) {
+        eventKeys.add(key);
+        var event = app.events.get(key);
+        if (event) {
+          longestEventDays = Math.max(longestEventDays, event.day_count || 0);
+        }
+      });
+    });
+
+    return {
+      warningDayCount: warningDayCount,
+      eventCount: eventKeys.size,
+      longestEventDays: longestEventDays,
+      firstDate: firstDate,
+      lastDate: lastDate
+    };
+  }
+
+  function getSeasonalRankSubtext(year, warningDayCount) {
+    var maxWarningDays = -1;
+
+    for (var y = getSiteStartYear(); y <= CONFIG.endYear; y++) {
+      var count = getYearStats(y).warningDayCount;
+      if (count > maxWarningDays) {
+        maxWarningDays = count;
+      }
+    }
+
+    if (warningDayCount === maxWarningDays && maxWarningDays > 0) {
+      return "MOST ON RECORD";
+    }
+
+    return "\u00a0";
+  }
+
+  function getToDateStats(year) {
+    var today = todayForSite();
+    var cutoffMonthDay = today.slice(5);
+    var selectedCount = countWarningDaysThroughMonthDay(year, cutoffMonthDay);
+    var allYears = [];
+
+    for (var y = getSiteStartYear(); y <= CONFIG.endYear; y++) {
+      var count = countWarningDaysThroughMonthDay(y, cutoffMonthDay);
+      allYears.push({ year: y, count: count });
+    }
+
+    var sortedCounts = allYears.map(function(item) { return item.count; })
+      .sort(function(a, b) { return b - a; });
+
+    var rank = sortedCounts.indexOf(selectedCount) + 1;
+    var tiedYears = allYears.filter(function(item) { return item.count === selectedCount; })
+      .map(function(item) { return item.year; });
+
+    var comparisonTotal = allYears.reduce(function(sum, item) {
+      return sum + item.count;
+    }, 0);
+    var comparisonAverage = allYears.length ? comparisonTotal / allYears.length : 0;
+
+    return {
+      year: year,
+      count: selectedCount,
+      cutoffMonthDay: cutoffMonthDay,
+      cutoffLabel: compactDateUpper(year + "-" + cutoffMonthDay),
+      rank: rank,
+      totalYears: allYears.length,
+      tiedYears: tiedYears,
+      average: comparisonAverage,
+      departure: selectedCount - comparisonAverage
+    };
+  }
+
+  function countWarningDaysThroughMonthDay(year, cutoffMonthDay) {
+    var count = 0;
+    var yearString = String(year);
+
+    app.dates.forEach(function(keys, dateString) {
+      if (dateString.slice(0, 4) === yearString && dateString.slice(5) <= cutoffMonthDay) {
+        count++;
+      }
+    });
+
+    return count;
+  }
+
+  function getToDateHeadlineText(stats) {
+    if (!stats || stats.totalYears <= 1) {
+      return "";
+    }
+
+    if (stats.rank === 1) {
+      return "MOST WARNING DAYS THROUGH " + stats.cutoffLabel;
+    }
+
+    return ordinalUpper(stats.rank) + " MOST THROUGH " + stats.cutoffLabel;
+  }
+
+  function getToDateRankSubtext(stats) {
+    if (!stats || stats.totalYears <= 1) {
+      return "To-date rank unavailable";
+    }
+
+    if (stats.rank === 1) {
+      return "MOST TO DATE";
+    }
+
+    return "\u00a0";
+  }
+
+  function getToDateAverageLine(stats) {
+    if (!stats || stats.totalYears <= 1) {
+      return "";
+    }
+
+    var avg = stats.average.toFixed(1);
+    var dep = stats.departure;
+    var depAbs = Math.abs(dep).toFixed(1);
+    var depText;
+
+    if (Math.abs(dep) < 0.05) {
+      depText = "near average";
+    } else {
+      depText = dep > 0 ? depAbs + " above average" : depAbs + " below average";
+    }
+
+    return '<div class="hcSummaryNote" style="margin-top: 8px;">To-date average through ' +
+      escapeHtml(stats.cutoffLabel) + ': ' + avg +
+      ' day' + plural(Number(avg)) + ' (' + depText + ')</div>';
+  }
+
+  function getFirstStartStats(year) {
+    var firstDates = [];
+    var selectedFirstDate = getFirstWarningDate(year);
+
+    for (var y = getSiteStartYear(); y <= CONFIG.endYear; y++) {
+      var firstDate = getFirstWarningDate(y);
+      if (firstDate) {
+        firstDates.push({
+          year: y,
+          date: firstDate,
+          monthDay: firstDate.slice(5)
+        });
+      }
+    }
+
+    firstDates.sort(function(a, b) {
+      if (a.monthDay < b.monthDay) return -1;
+      if (a.monthDay > b.monthDay) return 1;
+      return a.year - b.year;
+    });
+
+    if (!selectedFirstDate || !firstDates.length) {
+      return null;
+    }
+
+    var selectedMonthDay = selectedFirstDate.slice(5);
+    var sortedMonthDays = firstDates.map(function(item) { return item.monthDay; });
+    var rank = sortedMonthDays.indexOf(selectedMonthDay) + 1;
+    var tiedYears = firstDates.filter(function(item) {
+      return item.monthDay === selectedMonthDay;
+    }).map(function(item) { return item.year; });
+
+    return {
+      year: year,
+      firstDate: selectedFirstDate,
+      rank: rank,
+      totalYears: firstDates.length,
+      tiedYears: tiedYears
+    };
+  }
+
+  function getFirstWarningDate(year) {
+    var firstDate = null;
+    var yearString = String(year);
+
+    app.dates.forEach(function(keys, dateString) {
+      if (dateString.slice(0, 4) !== yearString) return;
+      if (!firstDate || dateString < firstDate) firstDate = dateString;
+    });
+
+    return firstDate;
+  }
+
+  function getLastEndStats(year) {
+    var lastDates = [];
+    var selectedLastDate = getLastWarningDate(year);
+
+    for (var y = getSiteStartYear(); y <= CONFIG.endYear; y++) {
+      var lastDate = getLastWarningDate(y);
+      if (lastDate) {
+        lastDates.push({
+          year: y,
+          date: lastDate,
+          monthDay: lastDate.slice(5)
+        });
+      }
+    }
+
+    if (!selectedLastDate || !lastDates.length) {
+      return null;
+    }
+
+    var selectedMonthDay = selectedLastDate.slice(5);
+    var earliestSorted = lastDates.slice().sort(function(a, b) {
+      if (a.monthDay < b.monthDay) return -1;
+      if (a.monthDay > b.monthDay) return 1;
+      return a.year - b.year;
+    });
+    var latestSorted = lastDates.slice().sort(function(a, b) {
+      if (a.monthDay > b.monthDay) return -1;
+      if (a.monthDay < b.monthDay) return 1;
+      return a.year - b.year;
+    });
+
+    return {
+      year: year,
+      lastDate: selectedLastDate,
+      earliestRank: earliestSorted.map(function(item) { return item.monthDay; }).indexOf(selectedMonthDay) + 1,
+      latestRank: latestSorted.map(function(item) { return item.monthDay; }).indexOf(selectedMonthDay) + 1,
+      totalYears: lastDates.length
+    };
+  }
+
+  function getLastWarningDate(year) {
+    var lastDate = null;
+    var yearString = String(year);
+
+    app.dates.forEach(function(keys, dateString) {
+      if (dateString.slice(0, 4) !== yearString) return;
+      if (!lastDate || dateString > lastDate) lastDate = dateString;
+    });
+
+    return lastDate;
+  }
+
+  function getFirstStartRecordLine(stats) {
+    if (!stats || !stats.firstDate || stats.rank > 3) {
+      return "";
+    }
+
+    if (stats.rank === 1) {
+      return nwsHeadline("EARLIEST START ON RECORD");
+    }
+
+    return nwsHeadline(ordinalUpper(stats.rank) + " EARLIEST START SINCE " + getSiteStartYear());
+  }
+
+  function getLastEndRecordLine(stats) {
+    if (!stats || !stats.lastDate || stats.latestRank > 3) {
+      return "";
+    }
+
+    if (stats.latestRank === 1) {
+      return nwsHeadline("LATEST END ON RECORD");
+    }
+
+    return nwsHeadline(ordinalUpper(stats.latestRank) + " LATEST END SINCE " + getSiteStartYear());
+  }
+
+  function nwsHeadline(text) {
+    return '<div class="hcSummaryHeadline">...' + escapeHtml(text).toUpperCase() + '...</div>';
+  }
+
+  function getDataUpdatedLine() {
+    var updated = getDataUpdatedTimestamp();
+
+    if (!updated) {
+      return '<div class="hcSummaryUpdated"><span class="hcSummaryUpdatedLabel">Data Updated</span><br>Time unavailable</div>';
+    }
+
+    return '<div class="hcSummaryUpdated"><span class="hcSummaryUpdatedLabel">Data Updated</span><br>' +
+      escapeHtml(formatDateTime(updated, app.data && app.data.timezone)) + '</div>';
+  }
+
+  function getDataUpdatedTimestamp() {
+    if (!app.data) {
+      return null;
+    }
+
+    var candidates = [
+      app.data.last_updated,
+      app.data.lastUpdated,
+      app.data.generated_at,
+      app.data.generatedAt,
+      app.data.updated,
+      app.data.Updated,
+      app.data.update_time,
+      app.data.updateTime,
+      app.data.created_at,
+      app.data.createdAt
+    ];
+
+    for (var i = 0; i < candidates.length; i++) {
+      if (candidates[i] && !isNaN(new Date(candidates[i]).getTime())) {
+        return candidates[i];
+      }
+    }
+
+    return app.dataLoadedAt;
+  }
+
+  function ordinal(number) {
+    var value = Math.abs(number);
+    var mod100 = value % 100;
+
+    if (mod100 >= 11 && mod100 <= 13) {
+      return number + "th";
+    }
+
+    switch (value % 10) {
+      case 1: return number + "st";
+      case 2: return number + "nd";
+      case 3: return number + "rd";
+      default: return number + "th";
+    }
+  }
+
+  function ordinalUpper(number) {
+    return ordinal(number).toUpperCase();
+  }
+
+  function renderMonth(year, month) {
+    var monthDiv = document.createElement("div");
+    monthDiv.className = "hcMonth";
+
+    var title = document.createElement("div");
+    title.className = "hcMonthTitle";
+    title.textContent = MONTH_NAMES[month];
+    monthDiv.appendChild(title);
+
+    var dow = document.createElement("div");
+    dow.className = "hcDow";
+
+    DAY_NAMES.forEach(function(day) {
+      var dayDiv = document.createElement("div");
+      dayDiv.textContent = day;
+      dow.appendChild(dayDiv);
+    });
+
+    monthDiv.appendChild(dow);
+
+    var daysGrid = document.createElement("div");
+    daysGrid.className = "hcDays";
+
+    var firstDay = new Date(year, month, 1).getDay();
+    var daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    for (var i = 0; i < firstDay; i++) {
+      var empty = document.createElement("div");
+      empty.className = "hcDay empty";
+      daysGrid.appendChild(empty);
+    }
+
+    for (var day = 1; day <= daysInMonth; day++) {
+      daysGrid.appendChild(renderDayCell(year, month, day));
+    }
+
+    monthDiv.appendChild(daysGrid);
+    return monthDiv;
+  }
+
+  function renderDayCell(year, month, day) {
+    var cell = document.createElement("div");
+    cell.className = "hcDay";
+
+    var dateString =
+      year + "-" +
+      String(month + 1).padStart(2, "0") + "-" +
+      String(day).padStart(2, "0");
+
+    app.cellsByDate.set(dateString, cell);
+
+    if (dateString === todayForSite()) {
+      cell.classList.add("today");
+    }
+
+    var dateNumber = document.createElement("div");
+    dateNumber.className = "hcDateNumber";
+    dateNumber.textContent = day;
+    cell.appendChild(dateNumber);
+
+    if (app.dates.has(dateString)) {
+      decorateWarningCell(cell, dateString);
+    } else {
+      cell.addEventListener("mouseenter", clearEventHighlight);
+    }
+
+    return cell;
+  }
+
+  function decorateWarningCell(cell, dateString) {
+    var eventKeys = app.dates.get(dateString);
+    var events = eventKeys.map(function(key) {
+      return app.events.get(key);
+    }).filter(Boolean);
+
+    cell.classList.add("warning");
+    cell.dataset.date = dateString;
+    cell.dataset.eventKeys = eventKeys.join(",");
+
+    var badge = document.createElement("div");
+    badge.className = "hcDurationBadge";
+
+    if (events.length > 1) {
+      badge.textContent = events.length + " events";
+      badge.classList.add("multi");
+    } else {
+      var duration = events[0].day_count || 0;
+      badge.textContent = duration + "d";
+
+      if (duration >= 10) {
+        badge.classList.add("veryLong");
+      } else if (duration >= 6) {
+        badge.classList.add("long");
+      }
+    }
+
+    cell.appendChild(badge);
+
+    cell.addEventListener("mouseenter", function() {
+      highlightEvents(eventKeys);
+    });
+
+    cell.addEventListener("click", function() {
+      highlightEvents(eventKeys);
+      showPopup(dateString, eventKeys);
+    });
+  }
+
+  function highlightEvents(eventKeys) {
+    clearEventHighlight();
+
+    var datesToHighlight = new Set();
+
+    eventKeys.forEach(function(key) {
+      var dates = app.eventDates.get(key) || [];
+      dates.forEach(function(dateString) {
+        datesToHighlight.add(dateString);
+      });
+    });
+
+    datesToHighlight.forEach(function(dateString) {
+      var cell = app.cellsByDate.get(dateString);
+      if (cell) {
+        cell.classList.add("eventHighlight");
+      }
+    });
+  }
+
+  function clearEventHighlight() {
+    document.querySelectorAll("#heatCalendar .eventHighlight").forEach(function(cell) {
+      cell.classList.remove("eventHighlight");
+    });
+  }
+
+  function showPopup(dateString, eventKeys) {
+    var events = eventKeys.map(function(key) {
+      return app.events.get(key);
+    }).filter(Boolean);
+
+    var html = '<h2>' + prettyDate(dateString) + '</h2>';
+    html += '<div class="hcPopupSubtitle">' + escapeHtml(app.data.site || siteNameFromKey(app.siteKey)) + '</div>';
+
+    events.forEach(function(event) {
+      var firstEventDate = event.dates[0];
+      var lastEventDate = event.dates[event.dates.length - 1];
+
+      html +=
+        '<div class="hcPopupEvent">' +
+          '<div class="hcPopupEventTitle">' + escapeHtml(event.hazard || "Heat Warning") + '</div>' +
+          '<div><strong>' + escapeHtml(event.wfo || "") + ' Event ' + escapeHtml(event.event_id || "") + '</strong></div>' +
+          '<div><strong>Event Dates:</strong> ' + compactDate(firstEventDate) + '–' + compactDate(lastEventDate) + ', ' + firstEventDate.slice(0, 4) + '</div>' +
+          '<div><strong>Duration:</strong> ' + (event.day_count || 0) + ' calendar day' + plural(event.day_count || 0) + '</div>' +
+          '<div><strong>Issued:</strong> ' + formatDateTime(event.issue, app.data.timezone) + '</div>' +
+          '<div><strong>Expired:</strong> ' + formatDateTime(event.expire, app.data.timezone) + '</div>' +
+          (event.ugc ? '<div><strong>UGC:</strong> ' + escapeHtml(event.ugc) + '</div>' : '') +
+          (event.product_url ? '<a href="' + escapeHtml(event.product_url) + '" target="_blank" rel="noopener noreferrer">View NWS Text Product</a>' : '') +
+        '</div>';
+    });
+
+    document.getElementById("hcPopupContent").innerHTML = html;
+    document.getElementById("hcPopupOverlay").style.display = "block";
+    document.getElementById("hcPopup").style.display = "block";
+  }
+
+  function closePopup() {
+    var overlay = document.getElementById("hcPopupOverlay");
+    var popup = document.getElementById("hcPopup");
+
+    if (overlay) overlay.style.display = "none";
+    if (popup) popup.style.display = "none";
+
+    clearEventHighlight();
+  }
+
+  function todayForSite() {
+    var timeZone = (app.data && app.data.timezone) ? app.data.timezone : "America/Phoenix";
+
+    return new Intl.DateTimeFormat("en-CA", {
+      timeZone: timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).format(new Date());
+  }
+
+  function prettyDate(dateString) {
+    var parts = dateString.split("-").map(Number);
+    return new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric"
+    }).format(new Date(parts[0], parts[1] - 1, parts[2]));
+  }
+
+  function compactDate(dateString) {
+    var parts = dateString.split("-").map(Number);
+    return new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "numeric"
+    }).format(new Date(parts[0], parts[1] - 1, parts[2]));
+  }
+
+  function compactDateUpper(dateString) {
+    return compactDate(dateString).toUpperCase();
+  }
+
+  function formatDateTime(isoString, timeZone) {
+    return new Intl.DateTimeFormat("en-US", {
+      timeZone: timeZone || "America/Phoenix",
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short"
+    }).format(new Date(isoString));
+  }
+
+  function siteNameFromKey(siteKey) {
+    if (siteKey === "phoenix") return "Phoenix";
+    if (siteKey === "yuma") return "Yuma";
+    if (siteKey === "elcentro") return "El Centro";
+    if (siteKey === "tucson") return "Tucson";
+    return siteKey || "";
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  function plural(count) {
+    return count === 1 ? "" : "s";
+  }
+
+  return {
+    load: load
+  };
+
+})();
+
+
+
+$( document ).ready(function() {
+    
+    // Load menu of available stations in json
+    loadMenu();
+    
+    // Load station data. Try to obtain from URL, if available.
+    try {
+      var sid = window.location.toString().split('?')[1];
+      if ( sid.length != 3 ) { var sid = 'PHX'; }
+    } catch(e) {
+      var sid = 'PHX';
+    };
+    loadHeatData(sid);
+});
+
+function parse(x) {
+    if ( x.length == 8 ) { x = x.slice(0,4) + '-' + x.slice(4,6) + '-' + x.slice(6,); }
+    return x;
+}
+
+function loadHeatData(sid) {
+    $.getJSON('/source/psr/heatdashboard/heat.json', function(data) {
+
+        // Store where the page is currently scrolled to
+    var scroll = $(window).scrollTop();
+
+    // Define today
+        var nowDay  = new Date().toISOString().split('T')[0];
+        var nowHour = new Date().toISOString().split('T')[1].split(':')[0];
+
+        /*
+            Update Time
+        */
+        $(".updateTime").html('Updated at<br>'+data['Updated']);
+
+        /*
+            Update Alerts
+        */
+        if ( data[sid]['alerts'][0] != 'None' ) {
+            var text = '<span id="headline1">' + data[sid]['alerts'][0] + '</span>' + '<br><span id="headline2">' + data[sid]['alerts'][1] + '</span>';
+            $("#alertBannerHeadline").html(text);
+            $("#alertBannerHeadline").css("line-height","normal")
+            $("#alertBannerHeadline").css("text-align","right")
+        if ( RegExp('WATCH').test(text) ) {
+            $("#alertBanner").css('background-color', 'maroon');
+        } else {
+            $("#alertBanner").css('background-color', 'Mediumvioletred'); }
+            $("#headline1").css('font-weight', 'bold');
+            $("#headline1").css('margin-right','-20px');
+            $("#headline1").css('color', 'white');
+            $("#headline1").css('font-size', '3em');
+            $("#headline1").css('letter-spacing', '0.1rem');
+            $("#headline2").css('font-style','italic');
+            $("#headline2").css('font-size','1.1em');
+            $("#headline2").css('padding-right','10px');
+            $("#headline2").css('color','white');
+        } else {
+        var text = '<span id="headline1">No Active Alerts</span>';
+            $("#alertBannerHeadline").html(text);
+        $("#alertBannerHeadline").css("text-align","center")
+        $("#alertBanner").css("background-color","lightgray")
+        $("#alertBanner").css("color","darkgray")        
+        $("#headline1").css("font-size","1.5em")
+        $("#headline1").css("line-height","70px")
+    }
+    
+        /*
+            Update forecast table
+        */
+
+        // Always seven days of forecast
+        for (i = 0; i < 7; i++) {
+          $(".ftc-0"+i).html(data['daysOfWeek'][i]+"<br/><span>"+data['daysOfTheMonth'][i]+"</span>");
+          $(".ftc-1"+i).html(data[sid]['forecast']['Max'][i]);
+          $(".ftc-2"+i).html(data[sid]['forecast']['Min'][i]);
+        }
+
+/*
+    Shade with HeatRisk Values
+*/
+var colors = {0: '#d1ebd1', 1: '#f4f257', 2: '#f69632', 3: '#d21419', 4: '#8b1991', 'empty': '#d3d3d3'};
+var textColors = {0: 'black', 1: 'black', 2: 'black', 3: 'white', 4: 'white', 'empty': 'black'};
+
+for (i=0; i<7; i++) {
+    var heatRiskValue = data[sid]['HeatRisk'][i];
+    
+    // Check if the value is an empty string
+    if (heatRiskValue === "") {
+        heatRiskValue = 'empty'; // Assign 'empty' for light grey background and black text
+    } else {
+        heatRiskValue = parseInt(heatRiskValue); // Otherwise parse the integer
+    }
+
+    $(".ftc-0"+i)
+        .css("background-color", colors[heatRiskValue])
+        .css("color", textColors[heatRiskValue])
+        .css("line-height", "40px")
+        .css("vertical-align", "middle");
+
+    $(".ftc-0"+i+" > span")
+        .css("color", textColors[heatRiskValue])
+        .css("font-size", "0.4em")
+        .css("line-height", "0px");
+
+    $(".ftc-1"+i)
+        .css("background-color", colors[heatRiskValue])
+        .css("color", textColors[heatRiskValue])
+        .css("padding-top", "10px");
+
+    $(".ftc-2"+i)
+        .css("background-color", colors[heatRiskValue])
+        .css("color", textColors[heatRiskValue]);
+}
+
+
+        /*
+            Update Probabilistic Forecast Table
+        */
+        for ( i=0; i<7; i++) {
+            $(".rtcp-0"+i).html(data['daysOfTheMonth'][i]);
+
+            $(".rtcp-1"+i).html(data[sid]['Probs'][i][5]);  // 120
+            $(".rtcp-2"+i).html(data[sid]['Probs'][i][4]);  // 110
+            $(".rtcp-6"+i).html(data[sid]['Probs'][i][3]);  // 105
+            $(".rtcp-3"+i).html(data[sid]['Probs'][i][2]);  // 100
+            $(".rtcp-4"+i).html(data[sid]['Probs'][i][1]);  // 90
+            $(".rtcp-5"+i).html(data[sid]['Probs'][i][0]);  // 80
+        }
+
+        $(".nbmtime").html("NBM Run: "+data['NBM_Time']);
+
+        /*
+            Update Records Table
+        */
+        for ( i=0; i<7; i++) {
+            $(".rtc-0"+i).html(data['daysOfTheMonth'][i]);
+            $(".rtc-1"+i).html(data[sid]['records']['Max'][i]);
+            $(".rtc-2"+i).html(data[sid]['records']['Min'][i]);
+        }
+
+        /*
+            Update AFD
+        */
+        $(".afdText").html(data[sid]['AFD']);
+    
+        /*
+            Update CPC data
+        */
+        $(".cpcAbove").html(data[sid]['CPC'][0]);
+        $(".cpcNear").html(data[sid]['CPC'][2]);
+        $(".cpcBelow").html(data[sid]['CPC'][1]);
+    
+    /*
+        Update the station shown, hide the menu, adjust scroll
+    */
+    $("span#loc").html(data[sid]['name']);
+
+    /*
+        Update Historical Heat Calendar
+        The calendar module receives the same station ID selected by the main page.
+    */
+    if (window.HeatCalendar) {
+      HeatCalendar.load(sid);
+    }
+
+    hideLocMenu();
+    $(window).scrollTop(scroll);
+
+    })
+}
+
+function loadMenu() {
+    
+  /*
+    Update list of stations
+  */
+    
+  // Load json data
+  $.getJSON('/source/psr/heatdashboard/heat.json', function(data) {
+
+    // Loop through included stations
+    var menuText = '';
+    for( var i=0; i < data['sids'].length; i++ ) {
+      //menuText += '<a href="#/" onclick="loadHeatData(' + "'" + data['sids'][i] + "')" + '">' + data[data['sids'][i]]['name'] + '</a>';
+      menuText += '<a href="javascript:void(0)" onclick="loadHeatData(' + "'" + data['sids'][i] + "')" + '">' + data[data['sids'][i]]['name'] + '</a>';
+    }
+    $(".dropdownMenu").html(menuText);
+
+  });
+    
+}
+
+function toggleBanner(id) {
+  if ( $('#'+id.replace("Infobar","Infobox")).css('display') == 'none' ) {
+    $('#'+id.replace("Infobar","Infobox")).css('display','block');
+    $('#'+id).text('-' + $('#'+id).text().slice(1));
+  } else {
+    $('#'+id.replace("Infobar","Infobox")).css('display','none');
+    $('#'+id).text('+' + $('#'+id).text().slice(1));
+  };
+};
+
+function closeFeedback() { $('div.feedback').css('display','none'); };
+
+function showLocMenu() {
+  $(".dropdownMenu").css("display", "block");
+};
+function hideLocMenu() {
+  $(".dropdownMenu").css("display", "none");
+};
+
+  function openImage(imageSrc) {
+    window.open(imageSrc, '_blank');
+  }
+
+  // Add event listener to change cursor to pointer when hovering over images
+  document.addEventListener('DOMContentLoaded', function() {
+    var images = document.querySelectorAll('.infobox .image');
+    images.forEach(function(image) {
+      image.style.cursor = 'pointer';
+    });
+  });
+</script></div>
+</div>
+</div>
+<div style="clear:both"></div>
+                        </div>
+
+                    </div><!-- end of <div class="partial-width-borderbottom"> -->
+   
+                </div><!-- <div class="full-width-border"> -->
+           
+                <!-- area for features, frontpage thumbs, and custom page -->
+                
+                
+                <!-- end of <div class="partial-width-borderbottom feature-block"> -->
+                
+                <div class="full-width-bordertop">
+                    <div class="full-width-first communication-links">
+        <div class="one-sixth-first divs">
+        <div class="myforecast-current">
+            <a style="text-decoration:none;" href="https://twitter.com/NWSPhoenix" target="_blank">
+                <img src="/bundles/templating/images/social/x.png" width="16" alt="Follow us on X" height="16">&nbsp;&nbsp;Follow us on X
+            </a>
+        </div>
+    </div>
+        <div class="one-sixth-first divs">
+        <div class="myforecast-current">
+            <a style="text-decoration:none;" href="https://www.facebook.com/NWSPhoenix" target="_blank">
+                <img src="/bundles/templating/images/social/facebook.png" width="16" alt="Follow us on Facebook" height="16">&nbsp;&nbsp;Follow us on Facebook
+            </a>
+        </div>
+    </div>
+        <div class="one-sixth-first divs">
+        <div class="myforecast-current">
+            <a style="text-decoration:none;" href="https://www.youtube.com/user/NWSPhoenix" target="_blank">
+                <img src="/bundles/templating/images/social/youtube.png" width="16" alt="Follow us on YouTube" height="16">&nbsp;&nbsp;Follow us on YouTube
+            </a>
+        </div>
+    </div>
+    <div class="one-half-last nopad">
+        <span class="txt-rt myforecast-current">
+            <div class="myforecast-current">
+                <a href="/rss_page.php?site_name=psr" target="_blank" style="text-decoration:none;font-size:11px;">
+                    <img src="/bundles/templating/images/social/rss.png" width="16" height="16" alt="PSR RSS Feed">&nbsp;&nbsp;PSR RSS Feed
+                </a>
+            </div>
+        </span>
+    </div>
+</div>
+<div style="clear:both;"></div>
+
+
+                </div>
+
+
+                <div style="clear:both;"></div>
+
+            </div><!-- <div class="center-content"> -->
+
+        </div><!-- end of <div class="center"> -->
+
+        <!-- sitemap area -->
+        <div class="footer">
+            <style type="text/css">
+    .footer-column-head a:link, .footer-column-head a:visited {
+        color: #ED7A08;
+    }
+</style>
+<div class="footer-content">
+            <div class="footer-column" style="padding:10px 10px;">
+                                </div>
+            <div class="footer-column" style="padding:10px 10px;">
+                                </div>
+            <div class="footer-column" style="padding:10px 10px;">
+                                </div>
+            <div class="footer-column" style="padding:10px 10px;">
+                                </div>
+            <div class="footer-column" style="padding:10px 10px;">
+                                </div>
+            <div class="footer-column" style="padding:10px 10px;">
+                                </div>
+    </div>
+
+        </div><!-- end of <div class="footer"> -->
+
+        <!-- legal footer area -->
+        <div class="footer-legal">
+            <div class="footer-legal">
+    <div class="footer-legal-content">
+
+        <div class="one-sixth-first" id="footer_legal_gov">
+            <a href="http://www.usa.gov"><img src="/bundles/templating/images/footer/usa_gov.png" alt="usa.gov" width="110" height="30"></a>
+        </div>
+
+        <div class="one-half-first" id="footer_legal_info">
+            <p>
+                <a href="http://www.commerce.gov">US Dept of Commerce</a><br>
+                <a href="http://www.noaa.gov">National Oceanic and Atmospheric Administration</a><br>
+                <a href="https://www.weather.gov">National Weather Service</a><br>
+                NWS Phoenix<br>                PAB 1TA, C/O SRP<br>
+                1667 N Priest Dr.<br>                Tempe, AZ 85288
+                <br>(602) 275-0073<br>
+                <br><a href="mailto:w-psr.webmaster@noaa.gov">Comments? Questions? Please Contact Us.</a>
+            </p>
+        </div>
+
+        <div class="one-third-last" id="footer_required_links">
+            <div class="div-half">
+                <a href="https://www.weather.gov/disclaimer">Disclaimer</a><br>
+                <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a><br>
+                <a href="https://www.weather.gov/help">Help</a><br>
+                <a href="/glossary">Glossary</a>
+            </div>
+
+            <div class="div-half">
+                <a href="https://www.weather.gov/privacy">Privacy Policy</a><br>
+                <a href="https://www.noaa.gov/foia-freedom-of-information-act">Freedom of Information Act (FOIA)</a><br>
+                <a href="https://www.weather.gov/about">About Us</a><br>
+                <a href="https://www.weather.gov/careers">Career Opportunities</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div><!-- end of <div class="footer-legal"> -->
+
+        <script type="text/javascript" src="//www.weather.gov/js/govshutdown.js"></script>
+    
+<div class="autocomplete-suggestions" style="position: absolute; display: none; width: 400px; max-height: 300px; z-index: 9999;"></div><div id="nwsexit-warning-dialog" style="display: none; position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 999999"><div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.7; filter: alpha(opacity=70);"></div><div style="position: relative; width: 600px; margin: 10% auto; padding: 20px; border-radius: 5px; background: white"><p>Thank you for visiting a National Oceanic and Atmospheric Administration (NOAA) website. The link you have selected will take you to a non-U.S. Government website for additional information.</p><p>NOAA is not responsible for the content of any linked website not operated by NOAA. This link is provided solely for your information and convenience, and does not imply any endorsement by NOAA or the U.S. Department of Commerce of the linked website or any information, products, or services contained therein.</p><p>You will be redirected to: <span class="nwsexit-link"></span></p><p style="margin-top:20px;"><a href="#" class="nwsexit-url" style="padding:8px 16px; font-size:18px; text-decoration:none; font-weight:bold; margin-right:20px; border-radius: 5px; background:#ED7A08; color:#fff;">Continue</a><a href="#" class="nwsexit-url nwsexit-hide" style="padding:8px 16px; font-size:18px; text-decoration:none; font-weight:bold; margin-right:20px; border-radius: 5px; background:#ED7A08; color:#fff;" target="_blank">New Window</a><a href="#" class="nwsexit-cancel" style="padding:8px 16px; font-size:18px; text-decoration:none; font-weight:normal; margin-right:20px; border-radius: 5px; background:#aaa; color:#fff;">Cancel</a></p></div></div><div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div id="hcPopupOverlay"></div><div id="hcPopup" role="dialog" aria-modal="true"><button id="hcClosePopup" title="Close">×</button><div id="hcPopupContent"></div></div></body></html>

@@ -1,0 +1,8 @@
+nws_illness_en https://www.weather.gov/safety/heat-illness
+nws_illness_es https://www.weather.gov/safety/heat-illness-es
+nws_during_en https://www.weather.gov/safety/heat-during
+nws_ww https://www.weather.gov/safety/heat-ww
+nws_ww_es https://www.weather.gov/safety/heat-ww-es
+cdc_about_es https://www.cdc.gov/heat-health/es/about/acerca-del-calor-y-su-salud.html
+cdc_extreme https://www.cdc.gov/disasters/extremeheat/index.html
+cdc_heat_clin https://www.cdc.gov/heat-health/hcp/clinical-overview/heat-stroke.html

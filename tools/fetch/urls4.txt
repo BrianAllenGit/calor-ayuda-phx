@@ -1,0 +1,5 @@
+niosh_es https://www.cdc.gov/niosh/heat-stress/es/about/enfermedades-relacionadas-con-el-calor.html
+niosh_en https://www.cdc.gov/niosh/heat-stress/about/illnesses.html
+nws_es_home https://www.weather.gov/safety/heat-sp
+nws_es_home2 https://www.weather.gov/espanol
+cdc_es_signs https://www.cdc.gov/extreme-heat/es/signs-symptoms/

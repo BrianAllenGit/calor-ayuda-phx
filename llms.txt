@@ -1,0 +1,30 @@
+# Calor · Ayuda en Phoenix
+
+> A free, ad-free, zero-tracking one-page tool in Spanish and English for people in the Phoenix, Arizona area who are hot or worried about heat. It boosts existing official pages (linked, not copied): the Maricopa County heat relief page and map, 211 Arizona, the CDC and NWS heat illness texts (quoted word for word, public domain), and the National Weather Service heat forecast. It gives general information, not medical advice. In an emergency, call 911. Read on 2026-11-27.
+
+## What it is
+- Where to cool off: Maricopa County's official Heat Relief Network map (sites run May 1 to September 30; the county says the map returns May 1, 2027).
+- 211 Arizona: dial 2-1-1 or 877-211-8661, daily 9 a.m. to 7 p.m., English and Spanish.
+- Warning signs of heat illness (CDC text, Spanish and English, unchanged) and the heat stroke text with the 911 instruction (NIOSH Spanish, NWS English, unchanged).
+- Heat forecast: NWS Phoenix heat page and HeatRisk.
+
+## Who it is for
+- People in the Phoenix area who need a place to cool off, or who are not sure when heat is an emergency.
+
+## Key links
+- Page: https://brianallengit.github.io/calor-ayuda-phx/
+- English view: https://brianallengit.github.io/calor-ayuda-phx/?lang=en
+
+## Sources
+- Maricopa County: Protect yourself from extreme heat in Arizona (Spanish page): https://www.maricopa.gov/3947/Protejase-Del-Calor-Extremo-En-Arizona
+- Maricopa County: Staying Safe in the Extreme Heat (English page): https://www.maricopa.gov/1871/Extreme-Heat
+- Official Heat Relief Network map (hrn.azmag.gov): https://hrn.azmag.gov/
+- City of Phoenix: heat news (English): https://www.phoenix.gov/newsroom/heat-news.html
+- City of Phoenix: Office of Heat Response and Mitigation: https://www.phoenix.gov/administration/departments/heat.html
+- 211 Arizona: heat relief information and resources: https://es.211arizona.org/crisis/heat-relief/
+- CDC: About Heat and Your Health (Spanish page): https://www.cdc.gov/heat-health/es/about/acerca-del-calor-y-su-salud.html
+- CDC: About Heat and Your Health: https://www.cdc.gov/heat-health/about/index.html
+- NIOSH (part of CDC): Heat-related illnesses (Spanish page): https://www.cdc.gov/niosh/heat-stress/es/about/enfermedades-relacionadas-con-el-calor.html
+- National Weather Service: Heat Cramps, Exhaustion, Stroke: https://www.weather.gov/safety/heat-illness
+- National Weather Service Phoenix: heat page: https://www.weather.gov/psr/heat
+- NWS HeatRisk (Spanish page): https://www.wpc.ncep.noaa.gov/heatrisk/esp

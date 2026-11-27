@@ -1,0 +1,58 @@
+×
+Experimental: This page is experimental to provide a period of time for customers to provide feedback to NWS.
+	
+National Weather Service
+
+National Oceanic and Atmospheric Administration
+	
+Bookmark	   	Data Access	   	Graphics	   	En español	   	Alaska	   	Probabilistic
+	
+NWS HeatRisk
+Highlighting Impactful Heat in the Seven Day Forecast
+Fri
+11/27
+Sat
+11/28
+Sun
+11/29
+Mon
+11/30
+Tue
+12/1
+Wed
+12/2
+Thu
+12/3
+NWS HeatRisk is supplementary to official NWS heat watches, warnings, and advisories. It provides guidance for decision makers and those who are sensitive to heat . For more information, view the tabs above the map.
+Category	Risk of Heat-Related Impacts
+Green
+0	Little to no risk from expected heat.
+Yellow
+1	Minor - Primarily affects those who are extremely sensitive to heat and without cooling/hydration.
+Orange
+2	Moderate - Affects those who are sensitive to heat, especially those without cooling/hydration, and some health systems and industries.
+Red
+3	Major - Affects anyone without cooling/hydration as well as health systems and industries.
+Magenta
+4	Extreme - Rare and/or long-duration extreme heat with no overnight relief affecting anyone without cooling/hydration as well as health systems, industries, and infrastructure.
+Comments? Questions? Please Contact Us.
+	
+Map
+Overview
+What's in
+HeatRisk?
+Understanding
+HeatRisk
+Additional
+Resources
+Valid:	
+Fri  Nov 27
+
+Updated:	
+Nov 27, 2026 9:49 PM GMT+0000
+HeatRisk	0-Little to None	1-Minor	2-Moderate	3-Major	4-Extreme
+Est. Population by Category	N/A	N/A	N/A	N/A
++
+−
+
+100%

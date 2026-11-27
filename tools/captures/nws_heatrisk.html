@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html><head>
+        
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+				
+		<title>NWS HeatRisk</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+        <link href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@3.1.4/dist/esri-leaflet-geocoder.css" crossorigin="">
+
+        <!-- LOCAL STUFF -->
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/leaflet-slider.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+
+        <!-- MAIN CONTAINER -->
+        <div id="main-container" class="container-fluid" style="min-height:100%;padding-left:0 !important;padding-right:0 !important;">
+
+            <!-- HEADER CONTAINER -->
+			<div id="header-container" class="container-fluid hidden-xs" style="padding:0px;">
+
+                <!-- Start STATUS banner for maintenance announcments -->
+                <!-- UPDATE ANNOUNCEMENT AND THEN UNCOMMENT BELOW TO SHOW STATUS BANNER -->
+
+                <style>
+                    .alert {
+                        padding: 15px;
+                        /* background-color: #f44336; */
+                        background-color: #fff3cd;
+                        /* color: white; */
+                        color: #333;
+                    }
+
+                    .closebtn {
+                        margin-left: 15px;
+                        /* color: white; */
+                        color: #333;
+                        font-weight: bold;
+                        float: right;
+                        font-size: 22px;
+                        line-height: 20px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+
+                    .closebtn:hover {
+                        color: black;
+                    }
+
+                    .geocoder-control-input {
+                        border-radius: 0px !important;
+                    }
+
+                    @media screen and (max-width:600px) {
+                        .hide-mobile {
+                            display: none;
+                        }
+                        .leaflet-control-slider {
+                            bottom: 40px;
+                        }
+                        /* #heatrisk-readout {
+                            left:55px; 
+                        } */
+                        .legend-text {
+                            font-size: 0.8em;
+                        }   
+
+                    }
+                    @media screen and (max-width:1400px) {
+                        .hide-lg-mobile {
+                            display: none;
+                        }
+                        /* #heatrisk-readout {
+                            left:55px; 
+                        } */
+                        .leaflet-control-slider {
+                            bottom: 40px;
+                        }
+                         .legend-text {
+                            font-size: 0.8em;
+                        }   
+                    }
+                </style>
+                <div id="experimental-alert" class="alert mb-0">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                    <!-- <center>
+                        <strong>Notice:</strong> This page will be unavaiable on Tuesday, October 18th, between 6:00am - 12:00pm MST, while we perform network maintenance.  <br />Thank you for your patience.
+                    </center> -->
+                    <center>
+                        <!-- <strong>Experimental </strong>- HeatRisk is not supported 24/7. Changes may occur without advance notice. -->
+                        <strong>Experimental: </strong> This page is experimental to provide a period of time for customers to provide feedback to NWS.
+                    </center>
+                </div>
+
+                <!-- End popup banner -->
+
+                <table style="margin-bottom:0px;padding:0px;width:100%;">
+                    <tbody><tr>
+                        <td style="width:105px;padding-left:5px;"><a href="http://www.weather.gov" target="_blank"><img src="images/logo.png"></a></td>
+                        <td>
+                            <table class="hide-mobile" style="margin-bottom:0px;padding:0px;">
+                                <tbody><tr>
+                                    <td><div style="display:inline-block;margin-top:0px;color:black;font-size:1.5em;font-weight:bold;">National Weather Service</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div style="color: #aeaeae;font-size:0.8em;letter-spacing: 2.5px;margin-top:-2px;">National Oceanic and Atmospheric Administration</div></td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                        <td style="text-align:right;">
+                            <table style="float:right;margin-bottom:0px;font-size:0.9em;">
+                                <tbody><tr>
+                                    <td><a href="#" onclick="showPermalinkDialog();" data-bs-toggle="tooltip" data-bs-target="permalink-dialog" data-placement="bottom" title="Clicking Permalink will generate a URL that you can bookmark to save your page customizations.">Bookmark</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="hide-mobile"><a href="data.html" target="_blank">Data Access</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="hide-mobile"><a href="graphics.html" target="_blank">Graphics</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="hide-mobile"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/esp" target="_blank">En español</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="hide-mobile"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/ak/" target="_blank">Alaska</a></td>
+                                    <td>&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="hide-mobile"><a href="https://www.wpc.ncep.noaa.gov/heatrisk/probs/" target="_blank">Probabilistic</a></td>
+                                </tr>
+                            </tbody></table>
+                        </td>
+                        <td><a href="http://www.commerce.gov"><img src="images/header_doc.png" style="float:right;"></a></td>
+                    </tr>
+                </tbody></table>
+			</div>
+			<div class="container-fluid" style="padding:0px;">
+				<div class="header-shadow-content"></div>
+			</div>
+            <!-- END HEADER CONTAINER -->
+
+            <!-- START BODY CONTAINER -->
+            <div id="body-container" class="container-fluid" style="margin:0 10px 0 0;padding: 0 0 40 0;"> 
+                <div class="row align-items-start">
+                    
+                    <!-- INFO COLUMN -->
+                    <div id="info-column" class="col-md-4">
+
+                        <div class="row">
+                            <span class="lead" style="font-weight:bold;font-size:2em;margin-left:10px;">NWS HeatRisk</span>
+                        </div>
+                        <div class="row">
+                            <span style="color:#0058a6;font-size:0.8em;font-weight:bold;margin-left:10px;"> Highlighting Impactful Heat in the Seven Day Forecast</span>
+                        </div>
+
+                        <div class="row" style="margin: 10px 0px 0px 0px;">
+                            <div id="heatrisk-buttons" class="btn-group btn-group-sm" role="group" aria-label="..."><button id="day_1" class="btn btn-outline-secondary btn-sm active" style="border:1px solid black;">Fri<br>11/27</button><button id="day_2" class="btn btn-outline-secondary btn-sm" style="border:1px solid black;">Sat<br>11/28</button><button id="day_3" class="btn btn-outline-secondary btn-sm" style="border:1px solid black;">Sun<br>11/29</button><button id="day_4" class="btn btn-outline-secondary btn-sm" style="border:1px solid black;">Mon<br>11/30</button><button id="day_5" class="btn btn-outline-secondary btn-sm" style="border:1px solid black;">Tue<br>12/1</button><button id="day_6" class="btn btn-outline-secondary btn-sm" style="border:1px solid black;">Wed<br>12/2</button><button id="day_7" class="btn btn-outline-secondary btn-sm" style="border:1px solid black;">Thu<br>12/3</button></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12" style="text-align:center;">
+                                <!-- <font style='font-size:0.8em;font-weight:bold;color:darkorange;'>Click map for potential heat risks and NWS forecast for a location.</font> -->
+                                <div id="geocode" style="min-height: 25px;margin:10px 14px;max-width:100% !important;"><div class="geocoder-control geocoder-control-expanded leaflet-control" style="width: 100%;"><input class="geocoder-control-input leaflet-bar" title="Location Search" placeholder="Enter an address or place"><div class="geocoder-control-suggestions leaflet-bar"><div class=""></div></div></div></div>
+                            </div>
+                        </div>
+
+                        <div class="hide-mobile" style="margin: 10px 0px 0px 10px; font-size:0.9em;">
+
+                            NWS HeatRisk is supplementary to official NWS heat watches, warnings, and advisories. It provides guidance for decision makers and those who are sensitive to heat <span class="bi bi-question-circle-fill heat-groups" data-bs-toggle="popover" data-bs-trigger="hover" aria-label="Heat Sensitive Groups" data-bs-original-title="Heat Sensitive Groups"></span>. For more information, view the tabs above the map.
+
+                            <!-- The NWS HeatRisk is an experimental color-numeric-based index that provides a forecast risk of heat-related impacts to occur over a 24-hour period. HeatRisk takes into consideration:
+
+                            <ul style='margin-bottom:0px;'>
+                                <li>How unusual the heat is for the time of the year</li>
+                                <li>The duration of the heat including both daytime and nighttime temperatures</li>
+                                <li>If those temperatures pose an elevated risk of heat-related impacts based on data from the CDC</li>
+                            </ul>
+
+                            This index is supplementary to official NWS heat products and is meant to provide risk guidance for those decision makers and heat-sensitive populations <span class="bi bi-patch-question-fill heat-groups" data-bs-toggle="popover" data-bs-trigger="hover" title="Heat Sensitive Groups"></span> who need to take actions at levels that may be below current NWS heat product levels. -->
+                        </div>
+
+                        <div class="row hide-mobile" style="margin: 10px 0px 0px 10px;">
+                           
+                                <table class="table table-bordered" style="width:100%;border:1px solid #999999;font-size:0.9em;">
+                                    <tbody><tr class="active">
+                                        <th style="width:80px;text-align:center;">Category</th>
+                                        <th style="text-align:center;">Risk of Heat-Related Impacts</th>
+                                    </tr>
+                                    <tr id="legend-0" class="hr_green" style="text-align: center; background-color: rgb(232, 249, 231);">	
+                                        <td>Green<br>0</td>
+                                        <td>Little to no risk from expected heat.</td>
+                                    </tr>
+                                    <tr id="legend-1" class="hr_yellow" style="text-align: center; background-color: rgb(244, 242, 87);">	
+                                        <td>Yellow<br>1</td>
+                                        <td>Minor - Primarily affects those who are extremely sensitive to heat and without cooling/hydration.</td>
+                                    </tr>
+                                    <tr id="legend-2" class="hr_orange" style="text-align: center; background-color: rgb(246, 150, 50);">	
+                                        <td>Orange<br>2</td>
+                                        <td>Moderate - Affects those who are sensitive to heat, especially those without cooling/hydration, and some health systems and industries.</td>
+                                    </tr>
+                                    <tr id="legend-3" class="hr_red" style="text-align: center; background-color: rgb(226, 47, 51);">	
+                                        <td>Red<br>3</td>
+                                        <td>Major - Affects anyone without cooling/hydration as well as health systems and industries.</td>
+                                    </tr>
+                                    <tr id="legend-4" class="hr_magenta" style="text-align: center; background-color: rgb(122, 14, 127);">	
+                                        <td>Magenta<br>4</td>
+                                        <td>Extreme - Rare and/or long-duration extreme heat with no overnight relief affecting anyone without cooling/hydration as well as health systems, industries, and infrastructure.</td>
+                                    </tr>
+                                </tbody></table>
+                        </div>
+                        <div id="survey-row" class="row hide-mobile">
+                            <div class="col-sm-12" style="text-align:center;font-size:0.8em;">
+                                <a href="https://www.surveymonkey.com/r/ExpNWSHeatRisk_2026">Comments? Questions? Please Contact Us.</a>
+                            </div>
+                        </div>
+                        <div id="logo-row" class="row hide-mobile">
+                            <table style="margin-bottom:0px;padding:0px;width:100%;">
+                                <tbody><tr>
+                                    <td align="right" style="width:53%;"><a href="http://www.weather.gov" target="_blank"><img src="images/logo.png"></a></td>
+                                    <td align="left" style="width:47%;"><a href="http://www.cdc.gov" target="_blank"><img src="images/CDC-logo-RGB-blue-sm.png"></a></td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+
+                    </div>
+                    <!-- END INFO COLUMN -->
+
+                    <!-- MAP COLUMN -->
+                    <div id="map-column" class="col-md-8">
+
+                        <ul id="mobile-tabs" class="nav nav-pills flex-column flex-sm-row justify-content-end" role="tablist" style="display:none;">
+                            <li class="nav-item" role="presentation" style="padding-top:10px;">
+                                <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map-pane" type="button" role="tab" aria-controls="map-pane" aria-selected="true">Map</button>
+                            </li>
+                            <li class="nav-item" role="presentation" style="padding-top:10px;">
+                                <button class="nav-link" id="mobile-overview-tab" data-bs-toggle="tab" data-bs-target="#mobile-overview-pane" type="button" role="tab" aria-controls="mobile-overview-pane" aria-selected="true">HeatRisk Overview</button>
+                            </li>
+                        </ul>
+
+                        <ul id="mobile-pills" class="nav nav-pills nav-pills-fill nav-pills-secondary justify-content-end hide-mobile" role="tablist">
+                            <li class="nav-item" role="presentation" style="padding-top:10px;">
+                                <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map-pane" type="button" role="tab" aria-controls="map-pane" aria-selected="true">Map</button>
+                            </li>
+                            <li class="nav-item hide-mobile" role="presentation" style="padding-top:10px;">
+                                <button class="nav-link" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview-pane" type="button" role="tab" aria-controls="overview-pane" aria-selected="true">Overview</button>
+                            </li>
+                            <li class="nav-item hide-mobile" role="presentation">
+                                <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-pane" type="button" role="tab" aria-controls="info-pane" aria-selected="true">What's in<br>HeatRisk?</button>
+                            </li>
+                            <li class="nav-item hide-mobile" role="presentation">
+                                <button class="nav-link" id="understand-tab" data-bs-toggle="tab" data-bs-target="#understand-pane" type="button" role="tab" aria-controls="understand-pane" aria-selected="true">Understanding<br>HeatRisk</button>
+                            </li>
+                            <li class="nav-item hide-mobile hide-lg-mobile" role="presentation">
+                                <button class="nav-link" id="cdc-tab" data-bs-toggle="tab" data-bs-target="#cdc-pane" type="button" role="tab" aria-controls="cdc-pane" aria-selected="true">CDC-NWS<br>Collaboration</button>
+                            </li>
+                            <li class="nav-item hide-mobile hide-lg-mobile" role="presentation" style="padding-top:10px;">
+                                <button class="nav-link" id="verif-tab" data-bs-toggle="tab" data-bs-target="#verif-pane" type="button" role="tab" aria-controls="verif-pane" aria-selected="true">Verification</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="resource-tab" data-bs-toggle="tab" data-bs-target="#resource-pane" type="button" role="tab" aria-controls="resource-pane" aria-selected="true">Additional<br>Resources</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="main-tab-content" style="margin-top:5px;">
+                            <div class="tab-pane fade show active" id="map-pane" role="tabpanel" aria-labelledby="map-tab">
+                                <!-- MAP CONTENT -->
+                                <div id="map-canvas" style="width: 100%; height: 506px; background: white; border: 1px solid black; position: relative;" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom">
+                                    <div id="loadingImgBg" style="position: relative; left: 50%; padding: 2px; top: 300px; width: 60px; height: 60px; z-index: 999; background-color: white; border: 1px solid rgb(51, 122, 183); border-radius: 5px; display: none;">
+                                        <img id="loadingImg" src="images/sunny.gif">
+                                    </div>
+                                    <div id="heatrisk-readout" style="">
+                                            <table style="width:100%;padding:0px;">
+                                            <tbody><tr>
+                                                <td style="text-align:right;">Valid:</td>
+                                                <td><div id="heatrisk-valid">Fri&nbsp;&nbsp;Nov 27</div></td> 
+                                            </tr>
+                                            <tr style="font-weight:400;font-size:0.8em;">
+                                                <td style="text-align:right;"><b>Updated:</b></td>
+                                                <td><div id="heatrisk-updated">Nov 27, 2026 9:49 PM GMT+0000</div></td> 
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                    <!-- <div id="heatrisk-update" style="display:none;margin-top:40px;">
+                                        <table style="width:100%;padding:0px;">
+                                            <tr>
+                                                <td style="width:65px;text-align:right;">Last Updated:</td>
+                                                <td><div id="heatrisk-updated"></div></td> 
+                                            </tr>
+                                        </table>
+                                    </div> -->
+                                    <!--
+                                    <div id='category-legend' style="display:none;position:absolute;left:10px;bottom:50px;background-color:white;border:1px solid black;border-radius:5px;width:300px;height:55px;z-index:999;">
+                                        <table style='width:100%;margin:5px;'>
+                                            <tr>
+                                                <th style='text-align:center;' colspan='4'>
+                                                    CDC Social Vulnerability Index (SVI)
+                                                </tr>
+                                            </tr>
+                                            <tr>
+                                                <td style='width:20px;height:10px;background-color:#41b6c4;border:2px solid white;'>&nbsp;</td>
+                                                <td style='padding-left:5px;'>More Vulnerable</td>
+                                                <td style='width:20px;height:10px;background-color:#225ea8;border:2px solid white;'>&nbsp;</td>
+                                                <td style='padding-left:5px;'>Most Vulnerable</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    -->
+                                    <div id="legend-div" style="position: absolute;bottom:20px;right:10px;padding:0px;">
+                                        
+                                        <div id="wwa-map-legend" style="display:none;position:relative;right:0px;bottom:0px;height:30px;z-index:999;">
+                                            <table style="width:100%;margin:2px;border:1px solid black;">
+                                                <tbody><tr>
+                                                    <td style="width:100px;text-align:center;background-color:white;"><b>Heat Hazards</b></td>
+                                                    <!-- <td id='wwwa-legend-0' style='width:100px;text-align:center;background: repeating-linear-gradient(45deg, rgba(144,144,144,0.25), rgba(144,144,144,0.25) 3px, white 3px, white 10px);background-color:white;'><span style='background-color:white;padding: 2px 3px;'><b>Watch</b></span></td>
+                                                    <td id='wwa-legend-2' style='width:100px;text-align:center;background: repeating-linear-gradient(0deg, rgba(144,144,144,0.25), rgba(144,144,144,0.25) 3px, white 3px, white 10px);background-color:white;'><span style='background-color:white;padding: 2px 3px;'><b>Advisory</b></span></td>
+                                                    <td id='wwa-legend-3' style='width:100px;text-align:center;background: repeating-linear-gradient(90deg, rgba(144,144,144,0.25), rgba(144,144,144,0.25) 3px, white 3px, white 10px);background-color:white;'><span style='background-color:white;padding: 2px 3px;'><b>Warning</b></span></td> -->
+                                                    <td id="wwwa-legend-0" style="width:100px;text-align:center;background-color:#800000;color:white;"><b>Watch</b></td>
+                                                    <td id="wwa-legend-2" style="width:100px;text-align:center;background-color:#FF7F50;color:white;"><b>Advisory</b></td>
+                                                    <td id="wwa-legend-3" style="width:100px;text-align:center;background-color:#C71585;color:white;"><b>Warning</b></td>
+                                                    
+                                                </tr>
+                                            </tbody></table>
+                                        </div>
+                                        <!--
+                                        <div id='svi-map-legend' style="display:none;position:relative;right:0px;bottom:0px;height:30px;z-index:999;">
+                                            <table style='width:100%;margin:2px;border:1px solid black;'>
+                                                <tr>
+                                                    <td style='width:100px;text-align:center;background-color:white;'><b>SVI Vulnerability</b></td>
+                                                    <td id='svi-legend-0' style='width:100px;text-align:center;background: repeating-linear-gradient(-45deg, rgba(144,144,144,0.25), rgba(144,144,144,0.25) 2px, white 5px, white 10px);background-color:white;'><span style='background-color:white;padding: 2px 5px;'><b>N/A</b></span></td>
+                                                    <td id='svi-legend-2' style='width:100px;text-align:center;background-color:rgb(255,255,219);'><b>Low</b></td>
+                                                    <td id='svi-legend-3' style='width:100px;text-align:center;background-color:rgb(189,229,202);'><b>Low-Medium</b></td>
+                                                    <td id='svi-legend-4' style='width:100px;text-align:center;background-color:rgb(122,204,214);'><b>Medium-High</b></td>
+                                                    <td id='svi-legend-5' style='width:100px;text-align:center;background-color:rgb(100,142,194);color:white;'><b>High</b></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        -->
+                                        <div id="heatrisk-map-legend" style="position:relative;right:0px;bottom:10px;height:30px;z-index:999;">
+                                            <table style="width:100%;margin:2px;border:1px solid black;">
+                                                <tbody><tr>
+                                                    <td id="map-legend-title" class="legend-text" style="width:100px;text-align:center;background-color:white;"><b>HeatRisk</b></td>
+                                                    <td id="map-legend-0" class="hr_green legend-text" style="width: 100px; text-align: center; background-color: rgb(232, 249, 231);"><b>0-Little to None</b></td>
+                                                    <td id="map-legend-1" class="hr_yellow legend-text" style="width: 100px; text-align: center; background-color: rgb(244, 242, 87);"><b>1-Minor</b></td>
+                                                    <td id="map-legend-2" class="hr_orange legend-text" style="width: 100px; text-align: center; background-color: rgb(246, 150, 50);"><b>2-Moderate</b></td>
+                                                    <td id="map-legend-3" class="hr_red legend-text" style="width: 100px; text-align: center; background-color: rgb(226, 47, 51);"><b>3-Major</b></td>
+                                                    <td id="map-legend-4" class="hr_magenta legend-text" style="width: 100px; text-align: center; background-color: rgb(122, 14, 127);"><b>4-Extreme</b></td>
+                                                </tr>
+                                                <tr style="border-top:1px solid black;">
+                                                    <td id="pop-legend-title" class="legend-text legend-text" colspan="2" style="text-align: center; background-color: white; width: 199.312px;"><b>Est. Population by Category</b></td>
+                                                    <td id="pop-legend-1" class="hr_yellow legend-text" style="text-align:center;"><b><span id="pop-1">N/A</span></b></td>
+                                                    <td id="pop-legend-2" class="hr_orange legend-text" style="text-align:center;"><b><span id="pop-2">N/A</span></b></td>
+                                                    <td id="pop-legend-3" class="hr_red legend-text" style="text-align:center;"><b><span id="pop-3">N/A</span></b></td>
+                                                    <td id="pop-legend-4" class="hr_magenta legend-text" style="text-align:center;"><b><span id="pop-4">N/A</span></b></td>
+                                                </tr>
+                                            </tbody></table>
+                                        </div>
+                                        <!-- <div id='population-map-legend' style="position:relative;right:0px;top:-10px;height:30px;z-index:999;">
+                                            <table style='width:100%;margin:2px;border:1px solid black;'>
+                                                <tr>
+                                                    <td id='pop-legend-title' style='width:100px;text-align:center;background-color:white;'><b>Population Impacted</b></td>
+                                                    <td id='pop-legend-1' class='hr_yellow' style='width:100px;text-align:center;'><b>Minor: <span id='pop-1'></span></b></td>
+                                                    <td id='pop-legend-2' class='hr_orange' style='width:100px;text-align:center;'><b>Moderate: <span id='pop-2'></span></b></td>
+                                                    <td id='pop-legend-3' class='hr_red' style='width:100px;text-align:center;'><b>Major: <span id='pop-3'></span></b></td>
+                                                    <td id='pop-legend-4' class='hr_magenta' style='width:100px;text-align:center;'><b>Extreme: <span id='pop-4'></span></b></td>
+                                                </tr>
+                                            </table>
+                                        </div> -->
+                                    </div>
+
+                                <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-gl-layer maplibregl-map" style="width: 992.4px; height: 604.8px; transform: translate3d(-82.7px, -50.4px, 0px);"><div class="maplibregl-canvas-container"><canvas class="maplibregl-canvas leaflet-image-layer leaflet-zoom-animated" tabindex="0" aria-label="Map" role="region" width="992" height="605" style="width: 992px; height: 605px;"></canvas></div><div class="maplibregl-control-container"><div class="maplibregl-ctrl-top-left "></div><div class="maplibregl-ctrl-top-right "></div><div class="maplibregl-ctrl-bottom-left "></div><div class="maplibregl-ctrl-bottom-right "></div></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_1_Mercator.png?rand=0.5108423205731132" alt="" style="z-index: 1; opacity: 1; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_2_Mercator.png?rand=0.5970477922058359" alt="" style="z-index: 1; opacity: 0; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_3_Mercator.png?rand=0.28333500893172725" alt="" style="z-index: 1; opacity: 0; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_4_Mercator.png?rand=0.1351594863392387" alt="" style="z-index: 1; opacity: 0; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_5_Mercator.png?rand=0.13872257320699655" alt="" style="z-index: 1; opacity: 0; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_6_Mercator.png?rand=0.5185562995512141" alt="" style="z-index: 1; opacity: 0; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"><img class="leaflet-image-layer leaflet-zoom-animated leaflet-interactive" crossorigin="anonymous" src="/heatrisk/data/HeatRisk_7_Mercator.png?rand=0.04667027885727215" alt="" style="z-index: 1; opacity: 0; transform: translate3d(42px, 35px, 0px); width: 744px; height: 434px;"></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(955.738px, 1577.95px, 0px) scale(8);"></div><div class="leaflet-pane leaflet-heatrisk-pane"></div><div class="leaflet-pane leaflet-boundaries-pane"></div><div class="leaflet-pane leaflet-reference-pane"><div class="leaflet-gl-layer maplibregl-map" style="width: 992.4px; height: 604.8px; transform: translate3d(-82.7px, -50.4px, 0px);"><div class="maplibregl-canvas-container"><canvas class="maplibregl-canvas leaflet-image-layer leaflet-zoom-animated" tabindex="0" aria-label="Map" role="region" width="992" height="605" style="width: 992px; height: 605px;"></canvas></div><div class="maplibregl-control-container"><div class="maplibregl-ctrl-top-left "></div><div class="maplibregl-ctrl-top-right "></div><div class="maplibregl-ctrl-bottom-left "></div><div class="maplibregl-ctrl-bottom-right "></div></div></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-layers leaflet-control" aria-haspopup="true"><a class="leaflet-control-layers-toggle" href="#" title="Layers"></a><form class="leaflet-control-layers-list"><div class="leaflet-control-layers-base"><label><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers" checked="checked"><span> Oceans</span></label><label><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers"><span> Hillshade</span></label><label><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers"><span> Light Gray</span></label><label><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers"><span> Dark Gray</span></label></div><div class="leaflet-control-layers-separator"></div><div class="leaflet-control-layers-overlays"><div class="leaflet-control-layers-group" id="leaflet-control-layers-group-1"><label class="leaflet-control-layers-group-label"><span class="leaflet-control-layers-group-name">Boundaries</span></label><label><input type="checkbox" class="leaflet-control-layers-selector"><span> <font style="font-weight:400 !important;">US States</font></span></label><label><input type="checkbox" class="leaflet-control-layers-selector"><span> <font style="font-weight:400 !important;">US Counties</font></span></label><label><input type="checkbox" class="leaflet-control-layers-selector"><span> <font style="font-weight:400 !important;">US Tribal Lands</font></span></label></div><div class="leaflet-control-layers-group" id="leaflet-control-layers-group-2"><label class="leaflet-control-layers-group-label"><span class="leaflet-control-layers-group-name">NWS Heat Products</span></label><label><input type="checkbox" class="leaflet-control-layers-selector"><span> <font style="font-weight:400 !important;">Extreme Heat Watch</font></span></label><label><input type="checkbox" class="leaflet-control-layers-selector"><span> <font style="font-weight:400 !important;">Heat Advisory</font></span></label><label><input type="checkbox" class="leaflet-control-layers-selector"><span> <font style="font-weight:400 !important;">Extreme Heat Warning</font></span></label></div></div></form></div></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-slider leaflet-control-slider-horizontal leaflet-control-slider-expanded leaflet-control"><a class="leaflet-control-slider-toggle" title="Leaflet Slider">S</a><p class="leaflet-control-slider-value">100%</p><div class="leaflet-slider-container" style="width: 144px;"><input class="leaflet-slider" title="Leaflet Slider" id="heatrisk-opacity" type="range" min="0" max="100" step="10" value="100"></div></div></div><div class="leaflet-bottom leaflet-right"></div></div></div>
+                            </div>
+                            <!-- OVERVIEW CONTENT -->
+                            <div class="tab-pane fade" id="overview-pane" role="tabpanel" aria-labelledby="overview-tab" style="font-size:0.8em;padding:10px;">
+
+                                <iframe id="overview-iframe" src="overview.html" width="100%" style="height: 600px;"></iframe>
+
+                            </div>
+                            <!-- INFO CONTENT -->
+                            <div class="tab-pane fade" id="info-pane" role="tabpanel" aria-labelledby="info-tab" style="font-size:0.8em;padding:10px;">
+                                
+                                <iframe id="whatsinheatrisk-iframe" src="whatsinheatrisk.html" width="100%" style="height: 600px;"></iframe>
+
+                            </div>
+                            <!-- UNDERSTAND CONTENT -->
+                            <div class="tab-pane fade" id="understand-pane" role="tabpanel" aria-labelledby="understand-tab" style="font-size:0.8em;padding:10px;">
+                                
+                                <iframe id="understanding-iframe" src="understanding.html" width="100%" style="height: 600px;"></iframe>
+
+                            </div>
+                             <!-- CDC CONTENT -->
+                             <div class="tab-pane fade" id="cdc-pane" role="tabpanel" aria-labelledby="cdc-tab" style="font-size:0.8em;padding:10px;">
+                                
+                                <iframe id="cdc-iframe" src="cdc.html" width="100%" style="height: 600px;"></iframe>
+
+                            </div>
+                             <!-- VERIF CONTENT -->
+                             <div class="tab-pane fade" id="verif-pane" role="tabpanel" aria-labelledby="verif-tab" style="font-size:0.8em;padding:10px;">
+                                
+                                <iframe id="verif-iframe" src="verif.html" width="100%" style="height: 600px;"></iframe>
+
+                            </div>
+                            <!-- RESOURCE CONTENT -->
+                            <div class="tab-pane fade" id="resource-pane" role="tabpanel" aria-labelledby="resource-tab" style="padding:10px;">
+                                <div style="width:100%;text-align:center;"><h4>Please see links below for more information about HeatRisk.</h4></div>
+                                <ul>
+                                    <li><a href="overview.html" target="_blank">HeatRisk Overview</a></li>
+                                    <li><a href="whatsinheatrisk.html" target="_blank">What's in HeatRisk?</a></li>
+                                    <li><a href="understanding.html" target="_blank">Understanding HeatRisk</a></li>
+                                    <li><a href="cdc.html" target="_blank">NWS / CDC Collaboration</a></li>
+                                    <li><a href="verif.html" target="_blank">Verification</a></li>
+                                </ul>
+                                <div style="width:100%;text-align:center;"><h4>Where can I go for more information on how to protect myself from heat?</h4></div>
+                                <ul>
+                                    <li><a href="https://www.heat.gov/" target="_blank">Heat.gov</a></li>
+                                    <li><a href="https://www.weather.gov/safety/heat" target="_blank">NWS Weather Ready Nation "Beat the Heat" Resources</a></li>
+                                    <li><a href="http://www.cdc.gov/heatrisk" target="_blank">CDC HeatRisk Dashboard</a></li>
+                                    <li><a href="https://ephtracking.cdc.gov/Applications/heatTracker/" target="_blank">CDC Heat &amp; Health Tracker</a></li>
+                                    <li><a href="http://emergency.cdc.gov/disasters/extremeheat/heattips.asp" target="_blank">CDC Tips for Preventing Heat-Related Illness</a></li>
+                                    <li><a href="http://emergency.cdc.gov/disasters/extremeheat/specificgroups.asp" target="_blank">CDC Info for Specific "Heat Sensitive" Groups</a></li>
+                                    <li><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/heat-wave-safety.html" target="_blank">American Red Cross Heat Wave Safety</a></li>
+                                    <li><a href="http://www.ready.gov/heat" target="_blank">Ready.gov Extreme Heat Resource</a></li>
+                                    <li><a href="https://www.osha.gov/heat" target="_blank">OSHA Heat Educational Resources</a></li>
+                                </ul>
+                                <!--
+                                <br><br>
+                                <div style='width:100%;text-align:center;'><h4>Where can find more information about the Social Vulnerability Index (SVI)?</h4></div>
+                                <ul>
+                                    <li><a href='https://www.atsdr.cdc.gov/placeandhealth/svi/index.html' target='_blank'>CDC/ATSDR Social Vulnerability Index</a></li>
+                                </ul>
+                                -->
+                            </div>
+                            <!-- MOBILE OVERVIEW CONTENT -->
+                            <div class="tab-pane fade" id="mobile-overview-pane" role="tabpanel" aria-labelledby="mobile-overview-tab" style="font-size:0.8em;padding:10px;">
+
+                                <div style="width:100%;text-align:center;"><h4>Please see links below for more information about HeatRisk.</h4></div>
+                                <ul>
+                                    <li><a href="overview.html" target="_blank">HeatRisk Overview</a></li>
+                                    <li><a href="whatsinheatrisk.html" target="_blank">What's in HeatRisk?</a></li>
+                                    <li><a href="understanding.html" target="_blank">Understanding HeatRisk</a></li>
+                                    <li><a href="cdc.html" target="_blank">NWS / CDC Collaboration</a></li>
+                                </ul>
+                                <br><br>
+                                <div style="width:100%;text-align:center;"><h4>Where can I go for more information on how to protect myself from heat?</h4></div>
+                                <ul>
+                                    <li><a href="https://www.heat.gov/" target="_blank">Heat.gov</a></li>
+                                    <li><a href="https://www.weather.gov/safety/heat" target="_blank">NWS Weather Ready Nation "Beat the Heat" Resources</a></li>
+                                    <li><a href="http://www.cdc.gov/heatrisk" target="_blank">CDC HeatRisk Dashboard</a></li>
+                                    <li><a href="https://ephtracking.cdc.gov/Applications/heatTracker/" target="_blank">CDC Heat &amp; Health Tracker</a></li>
+                                    <li><a href="http://emergency.cdc.gov/disasters/extremeheat/heattips.asp" target="_blank">CDC Tips for Preventing Heat-Related Illness</a></li>
+                                    <li><a href="http://emergency.cdc.gov/disasters/extremeheat/specificgroups.asp" target="_blank">CDC Info for Specific "Heat Sensitive" Groups</a></li>
+                                    <li><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/heat-wave-safety.html" target="_blank">American Red Cross Heat Wave Safety</a></li>
+                                    <li><a href="http://www.ready.gov/heat" target="_blank">Ready.gov Extreme Heat Resource</a></li>
+                                    <li><a href="https://www.osha.gov/heat" target="_blank">OSHA Heat Educational Resources</a></li>
+                                </ul>
+                                <!--
+                                <br><br>
+                                <div style='width:100%;text-align:center;'><h4>Where can find more information about the Social Vulnerability Index (SVI)?</h4></div>
+                                <ul>
+                                    <li><a href='https://www.atsdr.cdc.gov/placeandhealth/svi/index.html' target='_blank'>CDC/ATSDR Social Vulnerability Index</a></li>
+                                </ul>
+                                -->
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                    <!-- END MAP COLUMN -->
+
+                </div>
+            </div>
+            <!-- END BODY CONTAINER -->
+
+        </div>
+        <!-- END MAIN CONTAINER -->
+
+        <!-- Dialog for page issues -->
+		<div class="modal fade" id="notice-dialog" tabindex="-1" role="dialog" aria-labelledby="theModalLabel" aria-hidden="true">
+ 			<div class="modal-dialog modal-lg">
+ 				<div class="modal-content">
+ 					<div class="modal-header" style="background-color: orange !important;">
+						<h4 id="notice-title" class="modal-title">NOTICE</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ 					</div>
+ 					<div id="notice-content" class="modal-body" style="margin:auto;">
+                        Minor differences between HeatRisk forecasts provided by local forecast offices and this web page may occasionally be seen due to intermittent dataflow issues. When HeatRisk data is unavailable from a local forecast office, HeatRisk values on this webpage are calculated using the latest best available forecast data.
+					</div>
+					<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+
+        <!-- Dialog page updates -->
+		<div class="modal fade" id="update-dialog" tabindex="-1" role="dialog" aria-labelledby="theModalLabel" aria-hidden="true">
+ 			<div class="modal-dialog modal-lg">
+ 				<div class="modal-content">
+ 					<div class="modal-header" style="background-color: rgb(232,249,231) !important;">
+						<h4 id="update-title" class="modal-title">HeatRisk Update</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ 					</div>
+ 					<div id="update-content" class="modal-body" style="margin:auto;">
+                     This HeatRisk Prototype page has been updated based on user feedback. While functionality and category names/levels have remained the same, the map layers, HeatRisk description, and category definitions have been refreshed. Category wording is now aligned with other impact/risk-based indices in the NWS.
+					</div>
+					<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+
+        <!-- Dialog for individual hazards -->
+		<div class="modal fade" id="misc-dialog" tabindex="-1" role="dialog" aria-labelledby="theModalLabel" aria-hidden="true">
+ 			<div class="modal-dialog modal-lg">
+ 				<div class="modal-content">
+ 					<div class="modal-header" style="background-color: orange !important;">
+						<h4 id="misc-title" class="modal-title"></h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ 					</div>
+ 					<div id="misc-content" class="modal-body" style="margin:auto;">
+						<!-- <iframe id="misc-frame" src="" width="750px" height="650px" style="overflow:hidden;border:0px;"></iframe> -->
+					</div>
+					<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		
+ 		<!-- Permalink dialog -->
+		<div class="modal fade" id="permalink-dialog" tabindex="-1" role="dialog" aria-labelledby="theModalLabel" aria-hidden="true">
+ 			<div class="modal-dialog modal-lg">
+ 				<div class="modal-content">
+ 					<div class="modal-header" style="background-color: rgb(0, 88, 166) !important;color:white;">
+						<h4 id="permalink-title" class="modal-title">Bookmark Current View</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+ 					</div>
+ 					<div id="permalink-content" class="modal-body" style="margin:auto;">
+						<div style="width:100%;text-align:center;">The following URL can be used to share or return to the current map view:</div>
+						<input type="text" id="permalink-text" style="width:100%">
+						<br>
+						<div style="width:100%;text-align:center;">Press Ctrl+C to copy the link to your clipboard.</div>
+						<div style="width:100%;text-align:center;">
+							<button id="permalink-button" class="btn btn-info btn-xs" style="border:1px solid navy;" onclick="loadPermalink();">Open Link</button>
+						</div>
+					</div>
+					<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+		
+		<!-- PDD Dialog -->
+		<div class="modal fade" id="pdd-dialog" tabindex="-1" role="dialog" aria-labelledby="myPDDLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header" style="background-color: orange !important;">
+						<h4 class="modal-title">NWS CaRDS Document</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<iframe id="pdd-frame" src="#" width="100%" height="700px" frameborder="0" allowtransparency="true"></iframe>
+					</div>
+					<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+		    	</div><!-- /.modal-content -->
+		  	</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+        <!-- Feedback Dialog -->
+		<div class="modal fade" id="data-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header" style="background-color: orange !important;">
+						<h4 class="modal-title"><img src="images/nws_logo.png" style="height:40px;">&nbsp;&nbsp;&nbsp;NWS Potential Heat Risks - Survey</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<iframe src="https://docs.google.com/a/noaa.gov/forms/d/1tNjWDi96Taj5XatLxFG9BwNXOb9BRd9l69PGaOxvnZU/viewform" width="100%" height="700px" frameborder="0" allowtransparency="true"></iframe>
+					</div>
+					<div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-bs-dismiss="modal" aria-label="Close">Close</button>
+					</div>
+		    	</div><!-- /.modal-content -->
+		  	</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+        <!-- Google tag (gtag.js) -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XS4XRRNHSQ"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+                
+            gtag('config', 'G-XS4XRRNHSQ');
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/esri-leaflet@3.0.10/dist/esri-leaflet.js"></script>
+        <script src="https://unpkg.com/esri-leaflet-vector@4.2.3/dist/esri-leaflet-vector.js" crossorigin=""></script>
+        <script src="https://unpkg.com/esri-leaflet-geocoder@3.1.4/dist/esri-leaflet-geocoder.js" crossorigin=""></script>
+        <script src="https://unpkg.com/georaster"></script>
+
+        <!-- LOCAL STUFF -->
+        <script src="js/leaflet-slider.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet.groupedlayercontrol.min.js"></script>
+        <script type="text/javascript" src="/heatrisk/js/date.format.js"></script>
+        <!-- <script src="data/FileTimes.js"></script> -->
+        <script src="js/center.js"></script>
+
+        <script src="js/app.js"></script>
+
+    
+
+</body></html>

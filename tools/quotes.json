@@ -1,0 +1,38 @@
+{
+ "cdc_symptoms_en": {
+  "lang": "en",
+  "kind": "cdc",
+  "url": "https://www.cdc.gov/heat-health/about/index.html",
+  "title": "CDC: About Heat and Your Health, Know the Symptoms",
+  "html": "<h3>Know the Symptoms</h3><p>If your body gets too hot, you can get sick. Know the symptoms of your body overheating and know when to seek medical care.</p><p>Symptoms can include:</p><ul><li>Muscle cramping</li><li>Unusually heavy sweating</li><li>Shortness of breath</li><li>Dizziness</li><li>Headaches</li><li>Weakness</li><li>Nausea</li></ul><p>Watch for symptoms of overheating when you’re outside on hot days.</p>",
+  "doc_date": "Page date shown: July 20, 2026",
+  "retrieved": "2026-11-27"
+ },
+ "cdc_symptoms_es": {
+  "lang": "es",
+  "kind": "cdc",
+  "url": "https://www.cdc.gov/heat-health/es/about/acerca-del-calor-y-su-salud.html",
+  "title": "CDC: Acerca del calor y su salud, Conozca los síntomas",
+  "html": "<h3>Conozca los síntomas</h3><p>Si el cuerpo se calienta demasiado, usted puede enfermarse. Conozca los síntomas de sobrecalentamiento del cuerpo y sepa cuándo buscar atención médica.</p><p>Los síntomas pueden incluir:</p><ul><li>Calambres musculares</li><li>Sudoración excesiva</li><li>Dificultad para respirar</li><li>Mareos</li><li>Dolores de cabeza</li><li>Debilidad</li><li>Náuseas</li></ul><p>Esté atento a los síntomas de sobrecalentamiento cuando esté afuera en los días de calor.</p>",
+  "doc_date": "Page date shown: not read",
+  "retrieved": "2026-11-27"
+ },
+ "niosh_stroke_es": {
+  "lang": "es",
+  "kind": "cdc",
+  "url": "https://www.cdc.gov/niosh/heat-stress/es/about/enfermedades-relacionadas-con-el-calor.html",
+  "title": "NIOSH (CDC): Enfermedades relacionadas con el calor, Golpe de calor",
+  "html": "<h3>Golpe de calor</h3><p>El golpe de calor es la más grave de las enfermedades relacionadas con el calor. Se produce cuando el cuerpo ya no puede controlar su temperatura: la temperatura corporal aumenta rápidamente, el mecanismo de sudoración falla y el cuerpo no logra enfriarse. Cuando ocurre un golpe de calor, la temperatura corporal puede aumentar a 106 °F o más en un periodo de 10 a 15 minutos. El golpe de calor puede causar discapacidad permanente o la muerte si la persona no recibe tratamiento de emergencia.</p><h4>Síntomas del golpe de calor</h4><ul><li>Confusión, estado mental alterado, habla arrastrada o enredada</li><li>Pérdida del conocimiento (coma)</li><li>Piel caliente y seca o sudoración profusa</li><li>Convulsiones</li><li>Temperatura corporal muy alta</li><li>Es mortal si se demora el tratamiento</li></ul><h4>Primeros auxilios para el golpe de calor</h4><ul><li>Llame al 911 para obtener atención médica de emergencia.</li><li>Quédese con el trabajador hasta que lleguen los servicios médicos de emergencias.</li><li>Lleve al trabajador a un área fresca y con sombra y quítele las prendas de vestir externas.</li><li>Refresque rápidamente al trabajador usando los métodos siguientes:</li><li>Dele un baño de agua fría o hielo, de ser posible</li><li>Humedézcale la piel</li><li>Coloque paños húmedos fríos sobre la piel del trabajador</li><li>Empape la ropa con agua fría</li><li>Haga circular el aire alrededor del trabajador para acelerar el enfriamiento.</li><li>Coloque paños húmedos fríos o hielo sobre la cabeza y en el cuello, las axilas y las ingles; o empape la ropa con agua fría.</li></ul>",
+  "doc_date": "Page date shown: not read",
+  "retrieved": "2026-11-27"
+ },
+ "nws_illness_en": {
+  "lang": "en",
+  "kind": "nws",
+  "url": "https://www.weather.gov/safety/heat-illness",
+  "title": "NWS: Heat Cramps, Exhaustion, Stroke",
+  "html": "<h3>Heat Exhaustion</h3><p>Symptoms: Heavy sweating; weakness or tiredness; cool, pale, clammy skin; fast, weak pulse; muscle cramps; dizziness, nausea or vomiting; headache; fainting.</p><p>First Aid: Move person to a cooler environment, preferably a well air-conditioned room. Loosen clothing. Apply cool, wet cloths or have person sit in a cool bath. Offer sips of water.</p><p>Seek immediate medical attention if the person vomits, symptoms worsen or last longer than 1 hour</p><h3>Heat Stroke</h3><p>Symptoms: Throbbing headache; confusion; slurred speech; nausea; dizziness; body temperature above 103°F; hot, red, dry or damp skin; rapid and strong pulse; fainting; loss of consciousness.</p><p>First Aid: Call 911 or get the victim to a hospital immediately. Heat stroke is a severe medical emergency. Delay can be fatal. Move the victim to a cooler, preferably air-conditioned, environment. Reduce body temperature with cool cloths or bath. Use fan if heat index temperatures are below the high 90s. A fan can make you hotter at higher temperatures. Do NOT give fluids.</p>",
+  "doc_date": "Page date shown: none",
+  "retrieved": "2026-11-27"
+ }
+}

@@ -1,0 +1,17 @@
+county_heat_en https://www.maricopa.gov/1871/Extreme-Heat
+county_heat_es https://www.maricopa.gov/3947/
+county_copyright https://www.maricopa.gov/site/copyright
+county_privacy https://www.maricopa.gov/124/Privacy-Policy
+mag_hrn https://azmag.gov/heatrelief
+mag_hrn_map https://hrn.azmag.gov
+phx_heat https://www.phoenix.gov/heat
+phx_cooling https://www.phoenix.gov/heat/cooling-centers
+phx_terms https://www.phoenix.gov/terms-of-use
+az211 https://211arizona.org
+az211_heat https://211arizona.org/heat
+nws_phx https://www.weather.gov/psr/heat
+nws_heatrisk https://www.wpc.ncep.noaa.gov/heatrisk/
+cdc_heat_symptoms https://www.cdc.gov/heat-health/signs-symptoms/index.html
+cdc_heat_symptoms_es https://www.cdc.gov/heat-health/es/signs-symptoms/index.html
+cdc_heat_illness https://www.cdc.gov/heat-health/about/index.html
+cdc_copyright https://www.cdc.gov/other/policies/index.html

@@ -1,0 +1,5 @@
+phx_news_open https://www.phoenix.gov/newsroom/heat-news/heat-relief-sites-open-may-1.html
+phx_news_close https://www.phoenix.gov/newsroom/heat-news/dedicated-heat-relief-sites-close-for-fall--winter.html
+phx_news_list https://www.phoenix.gov/newsroom/heat-news.html
+az211_cooling https://211arizona.org/heat-relief/
+azdhs_hub https://www.azdhs.gov/preparedness/epidemiology-disease-control/extreme-weather/heat-safety/index.php
